@@ -53,3 +53,32 @@ sake of time.
 | 10-191 | Reserved | 
 | 192-254 | Reserved for Local Use |
 | 255 | Missing |
+
+### Table 1.4 - Type of Data
+| Code Figure | Meaning |
+| ----------- | ------: |
+| 0 | Analysis Products |
+| 1 | Forecast Products |
+| 2 | Analysis and Forecast Products |
+| 3 | Control Forecast Products |
+| 4 | Perturbed Forecast Products | 
+| 5 | Control and Perturbed Forecast Products |
+| 6 | Processed Satellite Observations |
+| 7 | Processed Radar Observations |
+| 8 | Event Probability |
+| 9-191 | Reserved |
+| 192-254 | Reserved for Local Use |
+| 192 | Experimental Products |
+| 255 | Missing |
+
+### Table 1.5 - Identification Template Number
+| Code Figure | Meaning |
+| ----------- | ------: |
+| 0 | Calendar Definition |
+| 1 | Paleontological Offset |
+| 2 | Calendar Definition and Paleontological Offset |
+| 3-32767 | Reserved |
+| 32768-65534 | Reserved for Local Use |
+| 65535 | Missing |
+
+
