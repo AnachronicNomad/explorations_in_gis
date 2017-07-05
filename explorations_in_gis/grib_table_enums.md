@@ -97,8 +97,7 @@ ___
 ### Table 3.1 - Grid Definition Template Number
   | Code Figure | Meaning |
   | ----------- | ------: |
-  | 0 | Latitude/Longitude (See Template 3.0) Also called Equidistant
-  Cylindrical or Plate Caree |
+  | 0 | Latitude/Longitude (See Template 3.0) Also called Equidistant Cylindrical or Plate Caree |
   | 1 | Rotated Latitude/Longitude (See Template 3.1) |
   | 2 | Stretched Latitude/Longitude (See Template 3.2) |
   | 3 | Rotated and Stretched Latitude/Longitude (See Template 3.3) |
