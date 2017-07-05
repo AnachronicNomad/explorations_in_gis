@@ -12,10 +12,10 @@ definitions I've found elsewhere; I'll try to edit this to include those as
 I find need of them. I've also skipped over some of the enum codes for the
 sake of time. 
 
-### TABLE 0.0 - DISCIPLINE
+### TABLE 0.0 - Discipline of Processed Data
 
 | Code Figure | Meaning |
-| ----------- | ------: |
+| :---------: | ------: |
 | 0       | Meterological Products |
 | 1       | Hydrological Products |
 | 2       | Land Surface Products |
