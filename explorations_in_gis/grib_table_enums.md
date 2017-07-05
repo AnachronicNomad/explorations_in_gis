@@ -15,7 +15,7 @@ sake of time.
 ### TABLE 0.0 - Discipline of Processed Data
 
 | Code Figure | Meaning |
-| :---------: | ------: |
+| ----------- | ------: |
 | 0       | Meterological Products |
 | 1       | Hydrological Products |
 | 2       | Land Surface Products |
@@ -26,4 +26,15 @@ sake of time.
 | 192-254 | Reserved for Local Use |
 | 255     | Missing |
 
-### TABLE 1.0 - 
+### TABLE 1.2 - Significance of Reference Time
+| Code Figure | Meaning |
+| ----------- | ------: |
+| 0 | Analysis |
+| 1 | Start of Forecast |
+| 2 | Verifying Time of Forecast |
+| 3 | Observation Time |
+| 4-191 | Reserved |
+| 192-254 | Reserved for Local Use |
+| 255 | Missing |
+
+
