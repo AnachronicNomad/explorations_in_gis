@@ -37,4 +37,19 @@ sake of time.
 | 192-254 | Reserved for Local Use |
 | 255 | Missing |
 
-
+### Table 1.3 - Production Status of Data
+| Code Figure | Meaning |
+| ----------- | ------: |
+| 0 | Operational Products |
+| 1 | Operational Test Products |
+| 2 | Research Products |
+| 3 | Re-Analysis Products |
+| 4 | THORPEX Interactive Grand Global Ensemble (TIGGE) |
+| 5 | THORPEX Interactive Grand Global Ensemble (TIGGE) test |
+| 6 | S2S Operational Products |
+| 7 | S2S Test Products |
+| 8 | Uncertainties in ensembles of regional reanalysis project (UERRA) |
+| 9 | Uncertainties in ensembles of regional reanalysis project (UERRA) Test |
+| 10-191 | Reserved | 
+| 192-254 | Reserved for Local Use |
+| 255 | Missing |
