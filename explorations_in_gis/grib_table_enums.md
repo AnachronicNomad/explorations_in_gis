@@ -18,8 +18,8 @@ For reference, I have tried to copy and compile the values from [an unofficial N
   | 11-191  | Reserved |
   | 192-254 | Reserved for Local Use |
   | 255     | Missing |
-***
 
+___
 ### TABLE 1.2 - Significance of Reference Time
   | Code Figure | Meaning |
   | ----------- | ------: |
@@ -80,6 +80,7 @@ For reference, I have tried to copy and compile the values from [an unofficial N
 ---
 
 ### Table 1.6 - Type of Calendar
+  | Code Figure | Meaning |
   | ----------- | ------: |
   | 0 | Gregorian |
   | 1 | 360-day |
@@ -91,8 +92,9 @@ For reference, I have tried to copy and compile the values from [an unofficial N
 
   1. Essentially a non-leap year
   2. Extends the Gregorian calendar indefinitely in the past
----
 
-***
+___
 ### Table 3.1 - Grid Definition Template Number
-| ----------- | ------: |
+  | Code Figure | Meaning |
+  | ----------- | ------: |
+
