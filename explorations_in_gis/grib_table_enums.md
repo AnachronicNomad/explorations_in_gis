@@ -474,26 +474,228 @@ ___
 ### Table 4.3 - Type of Generating Process
   | Code Figure | Meaning |
   | ----------- | ------: |
+  | 0 | Analysis |
+  | 1 | Initialization | 
+  | 2 | Forecast |
+  | 3 | Bias Corrected Forecast |
+  | 4 | Ensemble Forecast |
+  | 5 | Probability Forecast |
+  | 6 | Forecast Error |
+  | 7 | Analysis Error |
+  | 8 | Observation |
+  | 9 | Climatological |
+  | 10 | Probability-Weighted Forecast |
+  | 11 | Bias-Corrected Ensemble Forecast |
+  | 12 | Post-processed Analysis (See note) |
+  | 13 | Post-processed Forecast (See note) |
+  | 14 | Nowcast |
+  | 15 | Hindcast |
+  | 16 | Physical Retrieval |
+  | 17 | Regression Analysis |
+  | 18 | Difference Between Two Forecasts |
+  | 19-191 | Reserved |
+  | 192-254 | Reserved for Local Use |
+  | 192 | Forecast Confidence Indicator |
+  | 193 | Probability-mathced Mean |
+  | 194 | Neighborhood Probability |
+  | 195 | Bias-Corrected and Downscaled Ensemble Forecast |
+  | 196 | Perturbed Analysis for Ensemble Initialization |
+  | 255 | Missing |
+
+  Notes: 
+  1. Code figures 12 and 13 are intended in cases where code figures 0 and 2
+     may not be sufficient to indicate that significant post-processing has
+     taken place on an intial analysis or forecast output.
 ---
 
 ### Table 4.4 - Indicator of Unit of Time Range
   | Code Figure | Meaning |
   | ----------- | ------: |
+  | 0 | Minute | 
+  | 1 | Hour |
+  | 2 | Day | 
+  | 3 | Month |
+  | 4 | Year |
+  | 5 | Decade (10 Years) |
+  | 6 | Normal (30 Years) |
+  | 7 | Century (100 Years) |
+  | 8 | Reserved | 
+  | 9 | Reserved |
+  | 10 | 3 Hours | 
+  | 11 | 6 Hours |
+  | 12 | 12 Hours |
+  | 13 | Second |
+  | 14-191 | Reserved | 
+  | 192-254 | Reserved for Local Use |
+  | 255 | Missing |
 ---
 
 ### Table 4.5 - Fixed Surface Types and Units
-  | Code Figure | Meaning |
-  | ----------- | ------: |
+  | Code Figure | Meaning | Units |
+  | ----------- | ------: | :---- |
+  | 0 | Reserved | |
+  | 1 | Ground or Water Surface | | 
+  | 2 | Cloud Base Level | | 
+  | 3 | Level of Cloud Tops | |
+  | 4 | Level of 0°C Isotherm | |
+  | 5 | Level of Adiabatic Condensation Lifted from the Surface | |
+  | 6 | Maximum Wind Level | | 
+  | 7 | Tropopause | |
+  | 8 | Nominal Trop of the Atmosphere | | 
+  | 9 | Sea Bottom | | 
+  | 10 | Entire Atmosphere | | 
+  | 11 | Cumulonimbus Base (CB) | m | 
+  | 12 | Cumulonimbus Top (CT) | m |
+  | 13 | Lowest level where vertically integrated cloud cover exceeds the specified percentage (cloud base for a given percentage cloud cover) | % |
+  | 14 | Level of free convection (LFC) | | 
+  | 15 | Convection condensation level (CCL) | | 
+  | 16 | Level of neutral buoyancy or equilibrium (LNB) | |
+  | 17-19 | Reserved |
+  | 20 | Isothermal Level | K |
+  | 21 | Lowest level where mass density exceeds the specified value (base for a given threshold of mass density) | kg m-3 |
+  | 22 | Highest level where mass density exceeds the specified value (top for a given threshold of mass density) | kg m-3 |
+  | 23 | Lowest level where air concentration exceeds the specified value (base for a given threshold of air concentration | Bq m-3 |
+  | 24 | Highest level where air concentration exceeds the specified value (top for a given threshold of air concentration) | Bq m-3 |
+  | 25-99 | Reserved | | 
+  | 100 | Isobaric Surface | Pa |
+  | 101 | Mean Sea Level | |
+  | 102 | Specific Altitude Above Mean Sea Level | m |
+  | 103 | Specified Height Level Above Ground | m |
+  | 104 | Sigma Level | |
+  | 105 | Hybrid Level | |
+  | 106 | Depth Below Land Surface | m |
+  | 107 | Isentropic (theta) Level | K |
+  | 108 | Level at Specified Pressure Difference from Ground to Level | Pa |
+  | 109 | Potential Vorticity Surface | K m2 kg-1 s-1 |
+  | 110 | Reserved | |
+  | 111 | Eta Level | | 
+  | 112 | Reserved | |
+  | 113 | Logarithmic Hybrid Level | | 
+  | 114 | Snow Level | Numeric |
+  | 115 | Sigma height level (See Note 4) | |
+  | 116 | Reserved | |
+  | 117 | Mixed Layer Depth | m |
+  | 118 | Hybrid Height Level | | 
+  | 119 | Hybrid Pressure Level | | 
+  | 120-149 | Reserved | |
+  | 150 | Generalized Vertical Height Coordinate (see Note 4) | |
+  | 151 | Soil level (See Note 5) | |
+  | 152-159 | Reserved | |
+  | 160 | Depth Below Sea Level | m |
+  | 161 | Depth Below Water Surface | m |
+  | 162 | Lake or River Bottom | |
+  | 163 | Bottom Of Sediment Layer | |
+  | 164 | Bottom Of Thermally Active Sediment Layer | | 
+  | 165 | Bottom of Sediment Layer Penetrated By Thermal Wave | |
+  | 166 | Maxing Layer | |
+  | 167 | Bottom of Root Zone | |
+  | 168-173 | Reserved | |
+  | 174 | Top Surface of Ice on Sea, Lake or River | |
+  | 175 | Top Surface of Ice, under Snow, on Sea, Lake or River | |
+  | 176 | Bottom Surface (underside) Ice on Sea, Lake or River | |
+  | 177 | Deep Soil (of indefinite depth) | |
+  | 178 | Reserved | |
+  | 179 | Top Surface of Glacier Ice and Inland Ice | |
+  | 180 | Deep Inland or Glacier Ice (of indefinite depth) | | 
+  | 181 | Grid Tile Land Fraction as a Model Surface | |
+  | 182 | Grid Tile Water Fraction as a Model Surface | |
+  | 183 | Grid Tile Ice Fraction on Sea, Lake or River as a Model Surface | |
+  | 184 | Grid Tile Glacier Ice and Inland Ice Fraction as a Model Surface | |
+  | 185-191 | Reserved | | 
+  | 192-254 | Reserved for Local Use | |
+  | 200 | Entire atmosphere (considered as a single layer) | |
+  | 201 | Entire ocean (considered as a single layer) | |
+  | 204 | Highest tropospheric freezing level | |
+  | 206 | Grid scale cloud bottom level | |
+  | 207 | Grid scale cloud top level | |
+  | 209 | Boundary layer cloud bottom level | |
+  | 210 | Boundary layer clodu top level | |
+  | 211 | Boundary layer cloud layer | |
+  | 212 | Low cloud bottom level | |
+  | 213 | Low cloud top level | |
+  | 214 | Low cloud level | |
+  | 215 | Cloud ceiling | |
+  | 220 | Planetary Boundary Layer | |
+  | 221 | Layer Between Two Hybrid Levels | |
+  | 222 | Middle cloud bottom level | |
+  | 223 | Middle cloud top level | |
+  | 224 | Middle cloud layer | |
+  | 232 | High cloud bottom level | |
+  | 233 | High cloud top level | |
+  | 224 | High cloud layer | |
+  | 235 | Ocean Isotherm Level (1/10 °C) | |
+  | 236 | Layer between two depths below ocean surface | |
+  | 237 | Bottom of Ocean Mixed Layer (m) | |
+  | 238 | Bottom of Ocean Isothermal Layer (m) | |
+  | 239 | Layer Ocean Surface and 26C Ocean Isothermal Level | |
+  | 241 | Ordered Sequence of Data |
+  | 242 | Convective cloud bottom level | |
+  | 243 | Convective cloud top level | |
+  | 244 | Convective cloud layer | |
+  | 245 | Lowest level of the wet bulb zero | |
+  | 246 | Maximum equivalent potential temperature level | |
+  | 247 | Equilibrium level |
+  | 248 | Shallow convective cloud bottom level | |
+  | 249 | Shallow convective cloud top level | |
+  | 251 | Deep convective cloud bottom level | |
+  | 252 | Deep convective cloud top level | |
+  | 253 | Lowest bottom level of supercooled liquid water layer | |
+  | 254 | Highest top level of supercooled liquied water layer | |
+  | 255 | Missing |
+
+  Notes: (1).  The Eta vertical coordinate system involves normalizing the
+  pressure at some point on a specific level by the mean sea level pressure at
+  that point.
+
+  (2).  Hybrid height level (Code figure 118) can be defined as:
+  z(k)=A(k)+B(k)* orog (k=1,..., NLevels; orog=orography; z(k)=height in
+  meters at level(k)
+
+  (3).  Hybrid pressure level, for which code figure 119 shall be used insteaf
+  of 105, can be defined as: p(k)=A(k) + B(k) * sp (k=1,...,NLevels,
+  sp=surface pressure; p(k)=pressure at level (k)
+
+  (4). Sigma height level is the vertical model level of the height-based
+  terrain-following coordinate (Gal-Chen and Somerville, 1975). The value of
+  the level = (height of the level – height of the terrain) / (height of the
+  top level – height of the terrain), which is ≥ 0 and ≤ 1.
+
+  (5).  The definition of a generalized vertical height coordinate implies the
+  absence of coordinate values in section 4 but the presence of an external
+  3D-GRIB message that specifies the height of every model grid point in
+  meters (see Notes for section 4), i.e., this GRIB message will contain the
+  field with discipline = 0, category = 3, parameterm = 6 (Geometric height).
+
+  (6).  The soil level represents a model level for which the depth is not
+  constant across the model domain. The depth in metres of the level is
+  provided by another GRIB message with the parameter "Soil Depth" with
+  discipline 2, category 3 and parameter number 27.
 ---
 
 ### Table 4.6 - Type of Ensemble Forecast
   | Code Figure | Meaning |
   | ----------- | ------: |
+  | 0 | Unperturbed High-Resolution Control Forecast |
+  | 1 | Unperturbed Low-Resolution Control Forecast |
+  | 2 | Negatively Perturbed Forecast |
+  | 3 | Positively Perturbed Forecast |
+  | 4 | Multi-Model Forecast |
+  | 5-191 | Reserved | 
+  | 192-254 | Reserved for Local Use |
+  | 192 | Perturbed Ensemble Member |
+  | 255 | Missing |
 ---
 
 ### Table 4.7 - Derived Forecast
   | Code Figure | Meaning |
   | ----------- | ------: |
+  | 0 | Unweighted Mean of All Members |
+  | 1 | Weighted Mean of All Members |
+  | 2 | Standard Deviation w.r.t. Cluster Mean |
+  | 3 | Standard Deviation w.r.t. Cluster Mean, Normalized |
+  | 4 | Spread of All Members |
+  | 5 | Large Anomaly Index of All Members (see Note 1) | 
+  ***
 ---
 
 ### Table 4.8 - Clustering Method
