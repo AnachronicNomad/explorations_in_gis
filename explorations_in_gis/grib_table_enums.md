@@ -320,7 +320,9 @@ ___
 ###  Table 4.243 - Tile Class
 ###  Table 4.244 - Quality Indicator
 
+___
 ## Data Representation Section
+___
 ###  Table 5.0 - Data Representation Template Number 
 ###  Table 5.1 - Type of Original Field Values
 ###  Table 5.2 - Matrix Coordinate Value Function Definition 
@@ -331,10 +333,14 @@ ___
 ###  Table 5.7 - Precision of Floating Point Numbers 
 ###  Table 5.40 - Type of Compression
 
+___
 ## Bit Map Section
+___
 ### Table 6.0 - Bit Map Indicator
 
+___
 ## Data Section
+___
 ### Table 7.0 - Data Template Number
 
 ## 
