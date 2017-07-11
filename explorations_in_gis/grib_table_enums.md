@@ -335,13 +335,140 @@ ___
 ---
 
 ### Table 4.1 - Parameter Catagory by Product Discipline
-  | Code Figure | Meaning |
-  | ----------- | ------: |
+#### Product Discipline 0 - Meterological Products
+  | Category    | Description |
+  | ----------- | ----------: |
+  | 0 | Temperature | 
+  | 1 | Moisture | 
+  | 2 | Momentum | 
+  | 3 | Mass | 
+  | 4 | Short-wave radiation | 
+  | 5 | Long-wave radiation | 
+  | 6 | Cloud |
+  | 7 | Themodynamic Stability indicies | 
+  | 8 | Kinematic Stability indicies |
+  | 9 | Temperature Probabilities* | 
+  | 10 | Moisture Probabilities* |
+  | 11 | Momentum Probabilities* |
+  | 12 | Mass Probabilities* |
+  | 13 | Aerosols |
+  | 14 | Trace gases (e.g. Ozone, CO_2) |
+  | 15 | Radar |
+  | 16 | Forecast Radar Imagery |
+  | 17 | Electrodynamics |
+  | 18 | Nuclear/radiology|
+  | 19 | Physical atmospheric properties |
+  | 20 | Atmospheric Chemical Constituents |
+  | 21-189 | Reserved |
+  | 190 | CCITT IA5 string |
+  | 191 | Miscellaneous |
+  | 192 | Covariance |
+  | 192-254 | Reserved for Local Use |
+  | 255 | Missing |
+
+  Notes:
+  * Entries 9, 10, 11 and 12 are deprecated.
+
+#### Product Discipline 1 - Hydrological Products
+  | Category    | Description |
+  | ----------- | ----------: |
+  | 0 | Hydrology basic products |
+  | 1 | Hydrology probabilities |
+  | 2 | Inland water and sediment properties |
+  | 3-191 | Reserved |
+  | 192-254 | Reserved for Local Use |
+  | 255 | Missing |
+---
+
+#### Product Discipline 2 - Land Surface Products
+  | Category    | Description |
+  | ----------- | ----------: |
+  | 0 | Vegetation/Biomass |
+  | 1 | Agricultural Aquacultural Special Products |
+  | 2 | Transportation-related Products |
+  | 3 | Soil Products |
+  | 4 | Fire Weather Products |
+  | 5 | Land Surface Products |
+  | 6-191 | Reserved |
+  | 192-254 | Reserved for Local Use |
+  | 255 | Missing |
+---
+
+#### Product Discipline 3 - Space Products
+  | Category    | Description |
+  | ----------- | ----------: |
+  | 0 | Image Format Products (See note 1) | 
+  | 1 | Quantitative products (See note 2) |
+  | 2 | Cloud Properties |
+  | 3 | Flight Rules Conditions |
+  | 4 | Volcanic Ash |
+  | 5 | Sea-surface Temperature |
+  | 6 | Solar Radiation |
+  | 7-191 | Reserved
+  | 192 | Forecast Satellite Imagery (See note 2) |
+  | 192-254 | Reserved for Local Use |
+  | 255 | Missing |
+
+  Notes:
+  1. Data are numeric without units, although they might be given quantitative
+     meaning through a code table defined external to this document.  The
+     emphasis is on a displayable "picture" of some phenomenon, perhaps with
+     certain enhanced features.  Generally, each datum is an unsigned, one
+     octet integer, but some images format products might have another datum
+     size.  The size of the datum is indicated in Section 5 of the GRIB2
+     message.
+  2. Data are in specified physical units.
+---
+
+#### Product Discipline 4 - Space Weather Products (Validation)
+  | Category    | Description |
+  | ----------- | ----------: |
+  | 0 | Temperature |
+  | 1 | Momentum |
+  | 2 | Charged Particle Mass and Number |
+  | 3 | Electric and Magnetic Fields |
+  | 4 | Energetic Particles |
+  | 5 | Waves |
+  | 6 | Solar Electromagnetic Emissions |
+  | 7 | Terrestrial Electromagnetic Emissions |
+  | 8 | Imagery |
+  | 9 | Ion-Netral Coupling |
+  | 10-191 | Reserved |
+  | 192-254 | Reserved for Local Use |
+  | 255 | Missing |
+---
+
+
+
+#### Product Discipline 10 - Oceanographic Products
+  | Category    | Description |
+  | ----------- | ----------: |
+  | 0 | Waves |
+  | 1 | Currents |
+  | 2 | Ice |
+  | 3 | Surface Properties |
+  | 4 | Sub-surface Properties |
+  | 5-190 | Reserved |
+  | 191 | Miscellaneous |
+  | 192-254 | Reserved for Local Use |
+  | 255 | Missing |
 ---
 
 ### Table 4.2 - Parameter Number by Product Discipline and Parameter Category
-  | Code Figure | Meaning |
-  | ----------- | ------: |
+  [[ This looks mostly like a duplicate of Table 4.1 ]]
+  Notes:
+  1. By convention, the flux sign is positive if downward.
+  2. When a new parameter is to be added to Code table 4.2 and more than one
+     category applies, the choice of category should be made base on the
+     intended use of product. The discipline and category are an important
+     part of any product definition, so it is possible to have the same
+     parameter name in more than one category. For example, "Water
+     Temperature" in discipline 10 (Oceanographic Products), category 4 (sub-
+     surface properties) is used to reporting water temperature in the ocean
+     or open sea, and is not the same as "Water temperature" in discipline 1
+     (Hydrological Products), category 2 (Inland water and sediment
+     properties) which is used for reporting water temperature in freshwater
+     lakes and rivers.
 ---
 
 ### Table 4.3 - Type of Generating Process
