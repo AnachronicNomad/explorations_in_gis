@@ -230,3 +230,70 @@ ___
   | 32768-65534 | Reserved for Local Use |
   | 65535 | Missing |
 ---
+
+### Table 4.1 - Parameter Catory by Product Discipline
+
+### Table 4.2 - Parameter Number by Product Discipline and Parameter Category
+
+### Table 4.3 - Type of Generating Process
+
+### Table 4.4 - Indicator of Unit of Time Range
+
+### Table 4.5 - Fixed Surface Types and Units
+
+### Table 4.6 - Type of Ensemble Forecast
+
+### Table 4.7 - Derived Forecast
+
+### Table 4.8 - Clustering Method
+
+### Table 4.9 - Probability Type
+
+### Table 4.10 - Type of Statistical Processing
+
+### Table 4.11 - Type of Time Intervals
+
+### Table 4.12 - Operating Mode
+
+###  Table 4.13 - Quality Control Indicator
+###  Table 4.14 - Clutter Filter Indicator
+###  Table 4.15 - Type of Spatial Processing used to arrive at given data value from the source data
+###  Table 4.91 - Type of Interval
+###  Table 4.201 - Precipitation Type
+###  Table 4.202 - Precipitable Water Category
+###  Table 4.203 - Cloud Type
+###  Table 4.204 - Thunderstorm Coverage
+###  Table 4.205 - Presence of Aerosol
+###  Table 4.206 - Volcanic Ash
+###  Table 4.207 - Icing
+###  Table 4.208 - Turbulence
+###  Table 4.209 - Planetary Boundary-Layer Regime
+###  Table 4.210 - Contrail Intensity
+###  Table 4.211 - Contrail Engine Type
+###  Table 4.212 - Land Use
+###  Table 4.213 - Soil Type
+###  Table 4.215 - Remotely Sensed Snow Coverage
+###  Table 4.216 - Elevation of Snow Covered Terrain
+###  Table 4.217 - Cloud Mask Type
+###  Table 4.218 - Pixel Scene Type
+###  Table 4.219 - Cloud Top Height Quality Indicator
+###  Table 4.220 - Horizontal Dimension Processed
+###  Table 4.221 - Treatment of Missing Data 
+###  Table 4.222 - Categorical Result 
+###  Table 4.223 - Fire Detection Indicator 
+###  Table 4.224 - Categorical Outlook
+###  Table 4.225 - Weather
+###  Table 4.227 - Icing Scenario (Weather/Cloud Classification)
+###  Table 4.230 - Atmospheric Chemical or Physical Type
+###  Table 4.233 - Aerosol Type
+###  Table 4.234 - Canopy Cover Fraction
+###  Table 4.235 - Wave-Generated Wave Spectral Description
+###  Table 4.236 - Soil Texture Cover Fraction
+###  Table 4.240 - Type of Distribution Function
+###  Table 4.241 - Coverage Attributes
+###  Table 4.242 - Tile Classification
+###  Table 4.243 - Tile Class
+###  Table 4.244 - Quality Indicator
+
+## Data Representation Section
+
