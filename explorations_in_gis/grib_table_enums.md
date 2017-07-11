@@ -23,9 +23,27 @@ ___
 ## Indicator Section
 ___
 ### Table 1.0 - GRIB Master Tables Version Number
+  | Code Figure | Meaning |
+  | ----------- | ------: |
+  | 0 | Meterological Products |
+  | 1 | Hydrological Products | 
+  | 2 | Land Surface Products | 
+  | 3 | Space Products | 
+  | 4 | Space Products |
+  | 5-9 | Reserved | 
+  | 10 | Oceanographic Products |
+  | 11-191 | Reserved | 
+  | 192-254 | Reserved for Local Use | 
+  | 255 | Missing |
 ---
 
 ### Table 1.1 - GRIB Local Tables Version Number
+  | Code Figure | Meaning |
+  | ----------- | ------: |
+  | 0 | Local tables not used.  Only table entries and templates from the
+  current master table are valid. |
+  | 1-254 | Number of local table version used. |
+  | 255 | Missing |
 ---
 
 ### TABLE 1.2 - Significance of Reference Time
@@ -74,6 +92,9 @@ ___
   | 192-254 | Reserved for Local Use |
   | 192 | Experimental Products |
   | 255 | Missing |
+
+  Notes:
+  * An initialized analysis is considered a zero-hour forecast.
 ---
 
 ### Table 1.5 - Identification Template Number
@@ -104,6 +125,16 @@ ___
 ___
 ## Grid Definition Section
 ___
+### Table 3.0 - Source of Grid Definition
+  | Code Figure | Meaning |
+  | ----------- | ------: |
+  | 0 | Specified in Code Table 3.1 | 
+  | 1 | Presdetermined Grid Definition - Defined by Originating Center | 
+  | 2-191 | Reserved | 
+  | 102-254 | Reserved for Local Use | 
+  | 255 | A grid definition does not apply to this product |
+---
+
 ### Table 3.1 - Grid Definition Template Number
   | Code Figure | Meaning |
   | ----------- | ------: |
@@ -177,17 +208,64 @@ ___
 ---
 
 ###  Table 3.3 - Resolution and Component Flags
+  | Code Figure | Meaning |
+  | ----------- | ------: |
+---
+
 ###  Table 3.4 - Scanning Mode
+  | Code Figure | Meaning |
+  | ----------- | ------: |
+---
+
 ###  Table 3.5 - Projection Center
+  | Code Figure | Meaning |
+  | ----------- | ------: |
+---
+
 ###  Table 3.6 - Spectral Data Representation Type
+  | Code Figure | Meaning |
+  | ----------- | ------: |
+---
+
 ###  Table 3.7 - Spectral Data Representation Mode
+  | Code Figure | Meaning |
+  | ----------- | ------: |
+---
+
 ###  Table 3.8 - Grid Point Position
+  | Code Figure | Meaning |
+  | ----------- | ------: |
+---
+
 ###  Table 3.9 - Numbering Order of Diamonds
+  | Code Figure | Meaning |
+  | ----------- | ------: |
+---
+
 ###  Table 3.10 - Scanning Mode for One Diamond
+  | Code Figure | Meaning |
+  | ----------- | ------: |
+---
+
 ###  Table 3.11 - Interpretation of List of Numbers at end of section 3
+  | Code Figure | Meaning |
+  | ----------- | ------: |
+---
+
 ###  Table 3.15 - Physical Meaning of Vertical Coordinate
+  | Code Figure | Meaning |
+  | ----------- | ------: |
+---
+
 ###  Table 3.20 - Type of Horizontal Line
+  | Code Figure | Meaning |
+  | ----------- | ------: |
+---
+
 ###  Table 3.21 - Vertical Dimension Coordinate Values Definition
+  | Code Figure | Meaning |
+  | ----------- | ------: |
+---
 
 ___
 ## Product Definition Section
@@ -256,36 +334,96 @@ ___
   | 65535 | Missing |
 ---
 
-### Table 4.1 - Parameter Catory by Product Discipline
+### Table 4.1 - Parameter Catagory by Product Discipline
+  | Code Figure | Meaning |
+  | ----------- | ------: |
+---
 
 ### Table 4.2 - Parameter Number by Product Discipline and Parameter Category
+  | Code Figure | Meaning |
+  | ----------- | ------: |
+---
 
 ### Table 4.3 - Type of Generating Process
+  | Code Figure | Meaning |
+  | ----------- | ------: |
+---
 
 ### Table 4.4 - Indicator of Unit of Time Range
+  | Code Figure | Meaning |
+  | ----------- | ------: |
+---
 
 ### Table 4.5 - Fixed Surface Types and Units
+  | Code Figure | Meaning |
+  | ----------- | ------: |
+---
 
 ### Table 4.6 - Type of Ensemble Forecast
+  | Code Figure | Meaning |
+  | ----------- | ------: |
+---
 
 ### Table 4.7 - Derived Forecast
+  | Code Figure | Meaning |
+  | ----------- | ------: |
+---
 
 ### Table 4.8 - Clustering Method
+  | Code Figure | Meaning |
+  | ----------- | ------: |
+---
 
 ### Table 4.9 - Probability Type
+  | Code Figure | Meaning |
+  | ----------- | ------: |
+---
 
 ### Table 4.10 - Type of Statistical Processing
+  | Code Figure | Meaning |
+  | ----------- | ------: |
+---
 
 ### Table 4.11 - Type of Time Intervals
+  | Code Figure | Meaning |
+  | ----------- | ------: |
+---
 
 ### Table 4.12 - Operating Mode
+  | Code Figure | Meaning |
+  | ----------- | ------: |
+---
 
 ###  Table 4.13 - Quality Control Indicator
+  | Code Figure | Meaning |
+  | ----------- | ------: |
+---
+
 ###  Table 4.14 - Clutter Filter Indicator
+  | Code Figure | Meaning |
+  | ----------- | ------: |
+---
+
 ###  Table 4.15 - Type of Spatial Processing used to arrive at given data value from the source data
+  | Code Figure | Meaning |
+  | ----------- | ------: |
+---
+
 ###  Table 4.91 - Type of Interval
+  | Code Figure | Meaning |
+  | ----------- | ------: |
+---
+
 ###  Table 4.201 - Precipitation Type
+  | Code Figure | Meaning |
+  | ----------- | ------: |
+---
+
 ###  Table 4.202 - Precipitable Water Category
+  | Code Figure | Meaning |
+  | ----------- | ------: |
+---
+
 ###  Table 4.203 - Cloud Type
 ###  Table 4.204 - Thunderstorm Coverage
 ###  Table 4.205 - Presence of Aerosol
