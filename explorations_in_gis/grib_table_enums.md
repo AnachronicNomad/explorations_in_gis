@@ -296,4 +296,21 @@ ___
 ###  Table 4.244 - Quality Indicator
 
 ## Data Representation Section
+###  Table 5.0 - Data Representation Template Number 
+###  Table 5.1 - Type of Original Field Values
+###  Table 5.2 - Matrix Coordinate Value Function Definition 
+###  Table 5.3 - Matrix Coordinate Parameter
+###  Table 5.4 - Group Splitting Method
+###  Table 5.5 - Missing Value Management for Complex Packing
+###  Table 5.6 - Order of Spatial Differencing
+###  Table 5.7 - Precision of Floating Point Numbers 
+###  Table 5.40 - Type of Compression
+
+## Bit Map Section
+### Table 6.0 - Bit Map Indicator
+
+## Data Section
+### Table 7.0 - Data Template Number
+
+## 
 
