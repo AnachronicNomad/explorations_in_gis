@@ -20,6 +20,14 @@ For reference, I have tried to copy and compile the values from [an unofficial N
   | 255     | Missing |
 
 ___
+## Indicator Section
+___
+### Table 1.0 - GRIB Master Tables Version Number
+---
+
+### Table 1.1 - GRIB Local Tables Version Number
+---
+
 ### TABLE 1.2 - Significance of Reference Time
   | Code Figure | Meaning |
   | ----------- | ------: |
@@ -94,6 +102,8 @@ ___
   2. Extends the Gregorian calendar indefinitely in the past
 
 ___
+## Grid Definition Section
+___
 ### Table 3.1 - Grid Definition Template Number
   | Code Figure | Meaning |
   | ----------- | ------: |
@@ -166,6 +176,21 @@ ___
   | 255 | Missing |
 ---
 
+###  Table 3.3 - Resolution and Component Flags
+###  Table 3.4 - Scanning Mode
+###  Table 3.5 - Projection Center
+###  Table 3.6 - Spectral Data Representation Type
+###  Table 3.7 - Spectral Data Representation Mode
+###  Table 3.8 - Grid Point Position
+###  Table 3.9 - Numbering Order of Diamonds
+###  Table 3.10 - Scanning Mode for One Diamond
+###  Table 3.11 - Interpretation of List of Numbers at end of section 3
+###  Table 3.15 - Physical Meaning of Vertical Coordinate
+###  Table 3.20 - Type of Horizontal Line
+###  Table 3.21 - Vertical Dimension Coordinate Values Definition
+
+___
+## Product Definition Section
 ___
 ### Table 4.0 - Product Definition Template Number
   | Code Figure | Meaning |
