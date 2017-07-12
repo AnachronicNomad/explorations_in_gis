@@ -4,16 +4,15 @@ I wanted to keep track of the different enumeration codes for table entries in
 the GRIB format.
 -----
 For reference, I have tried to copy and compile the values from 
-[an unofficial NCEP document]
-(http://www.nco.ncep.noaa.gov/pmb/docs/grib2/grib2_doc.shtml#disclaimer), 
+[an unofficial NCEP document](http://www.nco.ncep.noaa.gov/pmb/docs/grib2/grib2_doc.shtml#disclaimer), 
 just to have them all in one place. However, there are numerous
 other acronyms and definitions I've found elsewhere; I'll try to edit this to
 include those as I find need of them. I've also skipped over some of the enum
 codes for the sake of time. 
 
-As noted at the bottom of the above page, the official docs are located [here]
-(http://www.wmo.int/pages/prog/www/WMOCodes.html), provided courtesy of the 
-World Meteorological Organization.
+As noted at the bottom of the above page, the official docs are located 
+[here](http://www.wmo.int/pages/prog/www/WMOCodes.html), 
+provided courtesy of the World Meteorological Organization.
 
 Naturally, the GRIB(2) format is a little on the dated side compared to the 
 FM 94 BUFR and FM 95 CREX formats. I thought I would take it for a spin; just 
@@ -197,8 +196,8 @@ the classic style of monk-ish academics.
  Notes:
  1. Center=7 (NCEP), subcenter=14(NWS Meteorological Development Laboratory
     (MDL)) used octet 6 to indicate which local use table to use. For MDL,
-    octet 6=1 indicates use: ["MDL Template 2.1"]
-    (http://www.nco.ncep.noaa.gov/pmb/docs/grib2/grib2_mdl_temp2-1.shtml)
+    octet 6=1 indicates use: 
+    ["MDL Template 2.1"](http://www.nco.ncep.noaa.gov/pmb/docs/grib2/grib2_mdl_temp2-1.shtml)
  ___
 
 
@@ -1502,12 +1501,14 @@ the classic style of monk-ish academics.
   | 65535 | Missing | | 
 
   [[ In the notes, it sez: ]]
-  [(See more ATMOSPHERIC CHEMICAL OR PHYSICAL CONSTITUENT TYPE in Common Code Table C-14)]
-  (http://www.nco.ncep.noaa.gov/pmb/docs/grib2/WMO306_vI2_CommonTable_v17.0.0.pdf)
+
+  [(See more ATMOSPHERIC CHEMICAL OR PHYSICAL CONSTITUENT TYPE in Common Code Table C-14)](http://www.nco.ncep.noaa.gov/pmb/docs/grib2/WMO306_vI2_CommonTable_v17.0.0.pdf)
   (Released date: Ver. 17.0.0 - 4 May, 2016)
 
  ###  Table 4.233 - Aerosol Type
+ 
   [[ These were the same as Table 4.230 up to a point, copied new info ]]
+
   | Code Figure | Meaning |
   | :---------: | ------- |
   | 62013 | Black carbon hydrophilic dry | 
