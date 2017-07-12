@@ -14,6 +14,7 @@ codes for the sake of time.
 ## 0. Indicator Section
 
   ### TABLE 0.0 - Discipline of Processed Data
+  |-------------|---------|
   | Code Figure | Meaning |
   | :---------: | ------- |
   | 0       | Meterological Products |
