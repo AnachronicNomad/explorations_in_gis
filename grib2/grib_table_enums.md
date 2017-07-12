@@ -3,9 +3,10 @@ grib_table_enums.md
 I wanted to keep track of the different enumeration codes for table entries in
 the GRIB format.
 -----
-For reference, I have tried to copy and compile the values from [an unofficial
-NCEP document](http://www.nco.ncep.noaa.gov/pmb/docs/grib2/grib2_doc.shtml#dis
-claimer), just to have them all in one place. However, there are numerous
+For reference, I have tried to copy and compile the values from 
+[an unofficial NCEP document]
+(http://www.nco.ncep.noaa.gov/pmb/docs/grib2/grib2_doc.shtml#disclaimer), 
+just to have them all in one place. However, there are numerous
 other acronyms and definitions I've found elsewhere; I'll try to edit this to
 include those as I find need of them. I've also skipped over some of the enum
 codes for the sake of time.
@@ -923,86 +924,285 @@ codes for the sake of time.
  ###  Table 4.204 - Thunderstorm Coverage
   | Code Figure | Meaning |
   | :---------: | ------- |
+  | 0 | None |
+  | 1 | Isolated (1-2%) |
+  | 2 | Few (3-5%) |
+  | 3 | Scattered (16-45%) |
+  | 4 | Numerous (>45%) |
+  | 5-191 | Reserved |
+  | 192-254 | Reserved for Local Use |
+  | 255 | Missing |
 
  ###  Table 4.205 - Presence of Aerosol
   | Code Figure | Meaning |
   | :---------: | ------- |
+  | 0 | Aerosol not present |
+  | 1 | Aerosol present |
+  | 2-191 | Reserved |
+  | 192-254 | Reserved for Local Use |
+  | 255 | Missing |
 
  ###  Table 4.206 - Volcanic Ash
   | Code Figure | Meaning |
   | :---------: | ------- |
+  | Code Figure | Meaning |
+  | :---------: | ------- |
+  | 0 | Aerosol not present |
+  | 1 | Aerosol present |
+  | 2-191 | Reserved |
+  | 192-254 | Reserved for Local Use |
+  | 255 | Missing |
 
  ###  Table 4.207 - Icing
   | Code Figure | Meaning |
   | :---------: | ------- |
+  | 0 | None |
+  | 1 | Light |
+  | 2 | Moderate |
+  | 3 | Severe |
+  | 4 | Trace |
+  | 5 | Heavy |
+  | 6-191 | Reserved |
+  | 192-254 | Reserved for Local Use |
+  | 255 | Missing |
 
  ###  Table 4.208 - Turbulence
   | Code Figure | Meaning |
   | :---------: | ------- |
+  | 0 | None |
+  | 1 | Light |
+  | 2 | Moderate |
+  | 3 | Severe |
+  | 4 | Trace |
+  | 5 | Heavy |
+  | 6-191 | Reserved |
+  | 192-254 | Reserved for Local Use |
+  | 255 | Missing | 
 
  ###  Table 4.209 - Planetary Boundary-Layer Regime
   | Code Figure | Meaning |
   | :---------: | ------- |
+  | 0 | Reserved |
+  | 1 | Stable |
+  | 2 | Mechanically-Driven Turbulence |
+  | 3 | Force Convection |
+  | 4 | Free Convection |
+  | 5-191 | Reserved |
+  | 192-254 | Reserved for Local Use |
+  | 255 | Missing |
 
  ###  Table 4.210 - Contrail Intensity
   | Code Figure | Meaning |
   | :---------: | ------- |
+  | 0 | Contrail Not Present |
+  | 1 | Contrail Present |
+  | 2-191 | Reserved |
+  | 192-254 | Reserved for Local Use |
+  | 255 | Missing |
 
  ###  Table 4.211 - Contrail Engine Type
   | Code Figure | Meaning |
   | :---------: | ------- |
+  | 0 | Low Bypass |
+  | 1 | High Bypass |
+  | 2 | Non-Bypass |
+  | 3-191 | Reserved |
+  | 192-254 | Reserved for Local Use |
+  | 255 | Missing |
 
  ###  Table 4.212 - Land Use
   | Code Figure | Meaning |
   | :---------: | ------- |
+  | 0 | Reserved |
+  | 1 | Urban Land |
+  | 2 | Agricultural |
+  | 3 | Range Land |
+  | 4 | Deciduous Forest |
+  | 5 | Coniferous Forest | 
+  | 6 | Forest/Wetland |
+  | 7 | Water |
+  | 8 | Wetlands |
+  | 9 | Desert |
+  | 10 | Tundra |
+  | 11 | Ice |
+  | 12 | Tropical Forest |
+  | 13 | Savannah |
+  | 14-191 | Reserved |
+  | 192-254 | Reserved for Local Use |
+  | 255 | Missing |
 
  ###  Table 4.213 - Soil Type
   | Code Figure | Meaning |
   | :---------: | ------- |
+  | 0 | Reserved | 
+  | 1 | Sand |
+  | 2 | Loamy Sand |
+  | 3 | Sandy Loam |
+  | 4 | Silt Loam |
+  | 5 | Organic |
+  | 6 | Sandy Clay Loam |
+  | 7 | Silt Clay Loam |
+  | 8 | Clay Loam |
+  | 9 | Sandy Clay |
+  | 10 | Silty Clay |
+  | 11 | Clay | 
+  | 12-191 | Reserved |
+  | 192-254 | Reserved for Local Use |
+  | 255 | Missing |
 
  ###  Table 4.215 - Remotely Sensed Snow Coverage
   | Code Figure | Meaning |
   | :---------: | ------- |
+  | 0-49 | Reserved |
+  | 50 | No-Snow/No-Cloud |
+  | 51-99 | Reserved |
+  | 100 | Clouds |
+  | 101-249 | Reserved |
+  | 250 | Snow |
+  | 192-254 | Reserved for Local Use |
+  | 255 | Missing |
 
  ###  Table 4.216 - Elevation of Snow Covered Terrain
   | Code Figure | Meaning |
   | :---------: | ------- |
+  | 0-90 | Elevation in increments of 100m |
+  | 91-253 | Reserved | 
+  | 254 | Clouds |
+  | 255 | Missing |
 
  ###  Table 4.217 - Cloud Mask Type
   | Code Figure | Meaning |
   | :---------: | ------- |
+  | 0 | Clear over water |
+  | 1 | Clear over land |
+  | 2 | Cloud |
+  | 3 | No data |
+  | 4-191 | Reserved |
+  | 192-254 | Reserved for Local Use |
+  | 255 | Missing |
 
  ###  Table 4.218 - Pixel Scene Type
   | Code Figure | Meaning |
   | :---------: | ------- |
+  | 0 | No Scene Identified |
+  | 1 | Green Needle-Leafed Forest |
+  | 2 | Green Broad-Leafed Forest |
+  | 3 | Deciduous Needle-Leafed Forest |
+  | 4 | Deciduous Broad-Leafed Forest | 
+  | 5 | Deciduous Mixed Forest |
+  | 6 | Closed Shrub-Land |
+  | 7 | Open Shrub-Land |
+  | 8 | Woody Savannah |
+  | 9 | Savannah |
+  | 10 | Grassland |
+  | 11 | Permanent Wetland |
+  | 12 | Cropland |
+  | 13 | Urban |
+  | 14 | Vegetation/Crops |
+  | 15 | Permanent Snow/Ice |
+  | 16 | Barren Desert |
+  | 17 | Water Bodies |
+  | 18 | Tundra |
+  | 19 | Warm Liquid Water Cloud |
+  | 20 | Supercooled Liquid Water Cloud |
+  | 21 | Mixed Phase Cloud |
+  | 22 | Optically Thin Ice Cloud |
+  | 23 | Optically Thick Ice Cloud |
+  | 24 | Multi-Layered Cloud |
+  | 25-96 | Reserved |
+  | 97 | Snow/Ice on Land |
+  | 98 | Snow/Ice on Water |
+  | 99 | Sun-Glint |
+  | 100 | General Cloud |
+  | 101 | Low Cloud / Fog / Stratus |
+  | 102 | Low Cloud / Stratocumulus |
+  | 103 | Low Cloud / Unknown Type |
+  | 104 | Medium Cloud / Nimbostratus |
+  | 105 | Medium Cloud / Altostratus |
+  | 106 | Medium Cloud / Unknown Type |
+  | 107 | High Cloud / Cumulus |
+  | 108 | High Cloud / Cirrus |
+  | 109 | High Cloud / Unknown Type |
+  | 110 | Unknown Cloud Type |
+  | 111-191 | Reseved |
+  | 192-254 | Reserved for Local Use |
+  | 255 | Missing |
 
  ###  Table 4.219 - Cloud Top Height Quality Indicator
   | Code Figure | Meaning |
   | :---------: | ------- |
+  | 0 | Nominal Cloud Top Height Quality |
+  | 1 | Fog In Segment |
+  | 2 | Poor Quality Height Estimation |
+  | 3 | Fog In Segment and Poor Quality Height Estimation |
+  | 4-191 | Reserved |
+  | 192-254 | Reserved for Local Use |
+  | 255 | Missing |
 
  ###  Table 4.220 - Horizontal Dimension Processed
   | Code Figure | Meaning |
   | :---------: | ------- |
+  | 0 | Latitude |
+  | 1 | Longitude |
+  | 2-191 | Reserved |
+  | 192-254 | Reserved for Local Use |
+  | 255 | Missing |
 
  ###  Table 4.221 - Treatment of Missing Data 
   | Code Figure | Meaning |
   | :---------: | ------- |
+  | 0 | Not included |
+  | 1 | Extrapolated |
+  | 2-191 | Reserved |
+  | 192-254 | Reserved for Local Use |
+  | 255 | Missing |
 
  ###  Table 4.222 - Categorical Result 
   | Code Figure | Meaning |
   | :---------: | ------- |
+  | 0 | No |
+  | 1 | Yes |
+  | 2-191 | Reserved |
+  | 192-254 | Reserved for Local Use |
+  | 255 | Missing |
 
  ###  Table 4.223 - Fire Detection Indicator 
   | Code Figure | Meaning |
   | :---------: | ------- |
+  | 0 | No Fire Detected |
+  | 1 | Possible Fire Detected |
+  | 2 | Probable Fire Detected |
+  | 3 | Missing |
+  | 4-191 | Reserved | 
+  | 192-254 | Reserved for Local Use |
+  | 255 | Missing |
 
  ###  Table 4.224 - Categorical Outlook
   | Code Figure | Meaning |
   | :---------: | ------- |
+  | 0 | No Risk Area |
+  | 1 | Reserved |
+  | 2 | General Thunderstorm Risk Area |
+  | 3 | Reserved | 
+  | 4 | Slight Risk Area |
+  | 5 | Reserved |
+  | 6 | Moderate Risk Area |
+  | 7 | Reserved |
+  | 8 | High Risk Area |
+  | 9-10 | Reserved |
+  | 11 | Dry Thunderstorm (Dry Lightning) Risk Area |
+  | 12-13 | Reserved |
+  | 14 | Critical Risk Area |
+  | 15-17 | Reserved |
+  | 18 | Extremely Critical Risk Area |
+  | 19-191 | Reserved |
+  | 192-254 | Reserved for Local Use |
+  | 255 | Missing |
 
  ###  Table 4.225 - Weather
-  | Code Figure | Meaning |
-  | :---------: | ------- |
+  [[ Apparently, this was changed recently! 
+     The table entry point refers to descriptors for an entirely different
+     format. I'll come back to it later ;) ]]
 
  ###  Table 4.227 - Icing Scenario (Weather/Cloud Classification)
   | Code Figure | Meaning |
