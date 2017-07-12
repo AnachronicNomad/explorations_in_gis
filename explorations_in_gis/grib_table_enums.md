@@ -12,7 +12,6 @@ grib_table_enums.md
 
 ___
 # 0. Indicator Section
-___
 
 ## TABLE 0.0 - Discipline of Processed Data
  | Code Figure | Meaning |
@@ -30,7 +29,6 @@ ___
 
 ___
 # 1. Identification Section
-___
 
 ## Table 1.0 - GRIB Master Tables Version Number
  | Code Figure | Meaning |
@@ -135,7 +133,6 @@ ___
 
 ___
 # 3. Grid Definition Section
-___
 
 ## Table 3.0 - Source of Grid Definition
  | Code Figure | Meaning |
@@ -281,7 +278,6 @@ ___
 
 ___
 # 4. Product Definition Section
-___
 
 ## Table 4.0 - Product Definition Template Number
  | Code Figure | Meaning |
@@ -1090,7 +1086,6 @@ ___
 
 ___
 # 5. Data Representation Section
-___
 
 ##  Table 5.0 - Data Representation Template Number 
  | Code Figure | Meaning |
@@ -1139,13 +1134,10 @@ ___
 
 ___
 # 6. Bit Map Section
-___
 
  ## Table 6.0 - Bit Map Indicator
 
 ___
 # 7. Data Section
-___
 
  ## Table 7.0 - Data Template Number
-
