@@ -1553,41 +1553,87 @@ the classic style of academic monks.
  ### Table 5.1 - Type of Original Field Values
   | Code Figure | Meaning |
   | :---------: | ------- |
+  | 0 | Floating Point |
+  | 1 | Integer |
+  | 2-191 | Reserved | 
+  | 192-254 | Reserved for Local Use |
+  | 255 | Missing |
  ---
 
  ### Table 5.2 - Matrix Coordinate Value Function Definition 
   | Code Figure | Meaning |
   | :---------: | ------- |
+  | 0 | Explicit Coordinate Values Set | 
+  | 1 | Linear Coordinates </br>  f(1) = C1 </br>  f(n) = C2 x f(n-1)
+  | 2-10 | Reserved |
+  | 11 | Geometric Coordinates </br>  f(1) = C1 </br>  f(n) = C2 x f(n-1)
+  | 12-191 | Reserved |
+  | 192-254 | Reserved for Local Use |
+  | 255 | Missing |
  ---
 
  ### Table 5.3 - Matrix Coordinate Parameter
   | Code Figure | Meaning |
   | :---------: | ------- |
+  | 0 | Reserved |
+  | 1 | Direction Degrees True |
+  | 2 | Frequency (s^-1) |
+  | 3 | Radial Number (2pi/lambda) (m^-1) |
+  | 4-191 | Reserved |
+  | 192-254 | Reserved for Local Use |
+  | 255 | Missing |
  ---
 
  ### Table 5.4 - Group Splitting Method
   | Code Figure | Meaning |
   | :---------: | ------- |
+  | 0 | Row by Row Splitting |
+  | 1 | General Group Splitting |
+  | 2-191 | Reserved |
+  | 192-254 | Reserved for Local Use |
+  | 255 | Missing |
  ---
 
  ### Table 5.5 - Missing Value Management for Complex Packing
   | Code Figure | Meaning |
   | :---------: | ------- |
+  | 0 | No explicit missing values included within the data values |
+  | 1 | Primary missing values included within the data values |
+  | 2 | Primary and secondary missing values included within the data values |
+  | 3-191 | Reserved |
+  | 192-254 | Reserved for Local Use |
+  | 255 | Missing |
  ---
 
  ### Table 5.6 - Order of Spatial Differencing
   | Code Figure | Meaning |
   | :---------: | ------- |
+  | 0 | Reserved |
+  | 1 | First-Order Spatial Differencing |
+  | 2 | Second-Order Spatial Differencing |
+  | 3-191 | Reserved |
+  | 192-254 | Reserved for Local Use |
+  | 255 | Missing |
  ---
 
  ### Table 5.7 - Precision of Floating Point Numbers 
   | Code Figure | Meaning |
   | :---------: | ------- |
+  | 0 | Reserved |
+  | 1 | IEEE 32-bit (I=4 in Section 7) |
+  | 2 | IEEE 64-bit (I=8 in Section 7) |
+  | 3 | IEEE 128-bit (I=16 in Section 7) |
+  | 4-254 | Reserved |
+  | 255 | Missing |
  ---
 
  ### Table 5.40 - Type of Compression
   | Code Figure | Meaning |
   | :---------: | ------- |
+  | 0 | Lossless |
+  | 1 | Lossy |
+  | 2-254 | Reserved |
+  | 255 | Missing |
  ---
 
 
