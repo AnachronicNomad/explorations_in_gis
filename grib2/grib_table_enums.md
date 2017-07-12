@@ -11,6 +11,9 @@ other acronyms and definitions I've found elsewhere; I'll try to edit this to
 include those as I find need of them. I've also skipped over some of the enum
 codes for the sake of time.
 
+Some modifications and jokes have been left inserted in my transcription, in 
+the classic style of academic monks.
+
 
 [0] Indicator Section 
 ====== 
@@ -1207,47 +1210,318 @@ codes for the sake of time.
  ###  Table 4.227 - Icing Scenario (Weather/Cloud Classification)
   | Code Figure | Meaning |
   | :---------: | ------- |
+  | 0 | None |
+  | 1 | General |
+  | 2 | Convective |
+  | 3 | Stratiform |
+  | 4 | Freezing |
+  | 5-191 | Reserved |
+  | 192-254 | Reserved for Local Use |
+  | 255 | Missing |
 
  ###  Table 4.230 - Atmospheric Chemical or Physical Type
-  | Code Figure | Meaning |
-  | :---------: | ------- |
+  | Code Figure | Meaning | Chemical Formula |
+  | :---------: | ------- | :--------------: |
+  | 0 | Ozone | O3 |
+  | 1 | Water Vapour | H2O |
+  | 2 | Methane | CH4 |
+  | 3 | Carbon Dioxide | CO2 |
+  | 4 | Carbon Monoxide | CO |
+  | 5 | Nitrogen Dioxide | NO2 |
+  | 6 | Nitrous Oxide | N2O |
+  | 7 | Formaldehyde | HCHO |
+  | 8 | Sulphur Dioxide | SO2 |
+  | 9 | Ammonia | NH3 |
+  | 10 | Ammonium | NH4+ |
+  | 11 | Nitrogen Monoxide | NO |
+  | 12 | Atomic Oxygen | O |
+  | 13 | Nitrate Radical | NO3 |
+  | 14 | Hydroperoxyl Radical | HO2 |
+  | 15 | Dinitrogen Pentoxide | H2O5 |
+  | 16 | Nitrous Acid | HONO |
+  | 17 | Nitric Acid | HNO3 |
+  | 18 | Peroxynitric Acid | HO2NO2 |
+  | 19 | Hydrogen Peroxide | H2O2 |
+  | 20 | Molecular Hydrogen | H |
+  | 21 | Atomic Nitrogen | N |
+  | 22 | Sulphate | SO4ˆ2- |
+  | 23 | Radon | Rn |
+  | 24 | Elemental Mercury | Hg(O) |
+  | 25 | Divalent Mercury | Hg^2+ |
+  | 26 | Atomic Chlorine | Cl |
+  | 27 | Chlorine Dioxide | CLO2 |
+  | 28 | Dichlorine Peroxide | CL2O2 |
+  | 29 | Hypochlorous Acid | HClO |
+  | 30 | Chlorine Nitrate | ClONO2 |
+  | 31 | Chlorine Dioxide | ClO2 |
+  | 32 | Atomic Bromide | Br |
+  | 33 | Bromine Monoxide | BrO |
+  | 34 | Bromine Chloride | BrCl |
+  | 35 | Hydrogen Bromide | HBr |
+  | 36 | Hypobromous Acid | HBrO |
+  | 37 | Bromine Nitrate | BrONO2 |
+  | 38 | Oxygen | O2 |
+  | 39-9999 | Reserved | |
+  | 10000 | Hydroxyl Radial | OH |
+  | 10001 | Methyl Peroxy Radical | CH3O2 |
+  | 10002 | Methyl Hydroperoxide | CH3O2H |
+  | 10003 | Reserved | |
+  | 10004 | Methanol | CH3OH |
+  | 10005 | Formic Acid | CH3OOH |
+  | 10006 | Hydrogen Cyanide | HCN |
+  | 10007 | Aceto Nitrile | CH3CN |
+  | 10008 | Ethane | C2H6 |
+  | 10009 | Ethene (Ethylene) | C2H4 |
+  | 10010 | Ethyne (Acetylene) | C2H2 |
+  | 10011 | Ethanol | C2H5OH |
+  | 10012 | Acetic Acid | C2H5OOH |
+  | 10013 | Peroxyacetyl Nitrate | CH3C(O)OONO2 |
+  | 10014 | Propane (and Propane Accessories) | C3H8 |
+  | 10015 | Propene | C3H6 |
+  | 10016 | Butanes | C4H10 |
+  | 10017 | Isoprene | C5H10 |
+  | 10018 | Alpha Pinene | C10H16 |
+  | 10019 | Beta Pinene | C10H16 |
+  | 10020 | Limonene | C10H16 |
+  | 10021 | Benzene | C6H6 |
+  | 10022 | Toluene | C7H8 |
+  | 10023 | Xylene | C8H10 |
+  | 10024-10499 | Reserved | |
+  | 10500 | Dimethyl Sulphide | CH3SCH3 | 
+  | 10501-20000 | Reserved | |
+  | 20001 | Hydrogen Chloride | HCL |
+  | 20002 | CFC-11 | |
+  | 20003 | CFC-12 | |
+  | 20004 | CFC-113 | |
+  | 20005 | CFC-113a | |
+  | 20006 | CFC-114 | |
+  | 20007 | CFC-115 | |
+  | 20008 | HCFC-22 | |
+  | 20009 | HCFC-141b | |
+  | 20010 | HCFC-142b | |
+  | 20011 | Halon-1202 | |
+  | 20012 | Halon-1211 | |
+  | 20013 | Halon-1301 | |
+  | 20014 | Halon-2402 | |
+  | 20015 | Methyl Chloride (HCC-40) | |
+  | 20016 | Carbon Tetrachloride (HCC-10) | |
+  | 20017 | HCC-140a CH3CCl3 | |
+  | 20018 | Methyl Bromide (HBC-40B1) | |
+  | 20019 | Hexachlorocyclohexane (HCH) | |
+  | 20020 | Alpha Hexachlorocyclohexane | |
+  | 20021 | Hexachlorobiphenyl (PCB-153) | |
+  | 20022-29999 | Reserved | |
+  | 30000 | Radioactive Pollutant (Tracer, defined by originating centre) | |
+  | 30001-50000 | Reserved | |
+  | 60000 | HOx Radical (OH+HO2) | |
+  | 60001 | Total Inorganic and Organic Peroxy Radicals (HO2+RO2) | RO2 |
+  | 60002 | Passive Ozone | |
+  | 60003 | NOx Expressed As Nitrogen | NOx |
+  | 60004 | All Nitrogen Oxides (NOy) Expressed As Nitrogen | NOy |
+  | 60005 | Total Inorganic Chlorine | Clx |
+  | 60006 | Total Inorganic Bromine | Brx |
+  | 60007 | Total Inorganic Chlorine Except HCl, ClONO2 | ClOx |
+  | 60008 | Total Inorganic Bromine Except Hbr, BrONO2 | BrOx |
+  | 60009 | Lumped Alkanes | |
+  | 60010 | Lumped Alkenes | |
+  | 60011 | Lumped Aromatic Coumpounds | |
+  | 60012 | Lumped Terpenes | |
+  | 60013 | Non-Methane Volatile Organic Compounds Expressed as Carbon | NMVOC |
+  | 60014 | Anthropogenic Non-Methane Volatile Organic Compounds Expressed as Carbon | aNMVOC |
+  | 60015 | Biogenic Non-Methane Volatile Organic Compounds Expressed as Carbon | bNMVOC |
+  | 60016 | Lumped Oxygenated Hydrocarbons | OVOC |
+  | 60017-61999 | Reserved | |
+  | 62000 | Total Aerosol | |
+  | 62001 | Dust Dry | |
+  | 62002 | water In Ambient | |
+  | 62003 | Ammonium Dry | |
+  | 62004 | Nitrate Dry | |
+  | 62005 | Nitric Acid Trihydrate | |
+  | 62006 | Sulphate Dry | |
+  | 62007 | Mercury Dry | |
+  | 62008 | Sea Salt Dry | |
+  | 62009 | Black Carbon Dry | |
+  | 62010 | Particulate Organic Matter Dry | |
+  | 62011 | Primary Particulate Organic Matter Dry | |
+  | 62012 | Secondary Particulate Organic Matter Dry | |
+  | 62013-65534 | Reserved | |
+  | 65535 | Missing | | 
+
+  [[ In the notes, it sez: ]]
+  [(See more ATMOSPHERIC CHEMICAL OR PHYSICAL CONSTITUENT TYPE in Common Code Table C-14)]
+  (http://www.nco.ncep.noaa.gov/pmb/docs/grib2/WMO306_vI2_CommonTable_v17.0.0.pdf)
+  (Released date: Ver. 17.0.0 - 4 May, 2016)
 
  ###  Table 4.233 - Aerosol Type
+  [[ These were the same as Table 4.230 up to a point, copied new info ]]
   | Code Figure | Meaning |
   | :---------: | ------- |
+  | 62013 | Black carbon hydrophilic dry | 
+  | 62014 | Black carbon hydrophobic dry | 
+  | 62015 | Particulate organic matter hydrophilic dry |
+  | 62016 | Particulate organic matter hydrophobic dry |
+  | 62017 | Nitrate hydrophilic dry |
+  | 62018 | Nitrate hydrophobic dry |
+  | 62019 | Reserved |
+  | 62020 | Smoke - high absorption |
+  | 62021 | Smoke - low absorption |
+  | 62022 | Aerosol - high absorption |
+  | 62023 | Aerosol - low absorption |
+  | 62024 | Reserved |
+  | 62025 | Volcanic ash |
+  | 62017-65534 | Reserved |
 
  ###  Table 4.234 - Canopy Cover Fraction
   | Code Figure | Meaning |
   | :---------: | ------- |
+  | 1 | Crops, mixed farming |
+  | 2 | Short grass |
+  | 3 | Evergreen needleleaf trees |
+  | 4 | Deciduous needleleaf trees |
+  | 5 | Deciduous broadleaf trees |
+  | 6 | Evergreen broadleaf trees |
+  | 7 | Tall grass |
+  | 8 | Desert |
+  | 9 | Tundra |
+  | 10 | Irrigated corps | 
+  | 11 | Semidesert |
+  | 12 | Ice caps and glaciers |
+  | 13 | Bogs and marshes |
+  | 14 | Inland water |
+  | 15 | Ocean |
+  | 16 | Evergreen shrubs |
+  | 17 | Deciduous shrubs |
+  | 18 | Mixed forest |
+  | 19 | Interrupted forest |
+  | 20 | Water and land mixtures |
+  | 21-191 | Reserved |
+  | 192-254 | Reserved for Local Use |
+  | 255 | Missing |
 
  ###  Table 4.235 - Wave-Generated Wave Spectral Description
   | Code Figure | Meaning |
   | :---------: | ------- |
+  | 0 | Total Wave Spectrum (combined wind waves and swell) |
+  | 1 | Generalized Partition |
+  | 2-191 | Reserved |
+  | 192-254 | Reserved for Local Use |
+  | 255 | Missing |
 
  ###  Table 4.236 - Soil Texture Cover Fraction
   | Code Figure | Meaning |
   | :---------: | ------- |
+  | 1 | Coarse |
+  | 2 | Medium |
+  | 3 | Medium-fine |
+  | 4 | Fine | 
+  | 5 | Very-fine |
+  | 6 | Organic |
+  | 7 | Tropical-organic |
+  | 8-191 | Reserved |
+  | 192-254 | Reserved for Local Use |
+  | 255 | Missing |
 
  ###  Table 4.240 - Type of Distribution Function
   | Code Figure | Meaning |
   | :---------: | ------- |
+  | 0 | No specific distribution function given |
+  | 1 | Delta functions with spatially variable concentration and fixed diameters Dl(p1) in meter (See Note 1) |
+  | 2 | Delta functions with spatially variable concentration and fixed masses Ml(p1) in kg (See Note 2) |
+  | 3 | Gaussian (Normal) distribution with spatially variable concentration and fixed mean diameter Dl(p1) and variance δ (p2) (See Note 3) |
+  | 4 | Gaussian (Normal) distribution with spatially variable concentration, mean diameter and variance (See Note 4) |
+  | 5 | Log-normal distribution with spatially variable number density, mean diameter and variance (See Note 5) |
+  | 6 | Log-normal distribution with spatially variable number density, mean diameter and fixed variance δ (p1) (See Note 6) |
+  | 7 | Log-normal distribution with spatially variable number density and mass density and fixed variance δ and fixed particle density ρ (p2) (See Note 7) |
+  | 8 | No distribution function. The encoded variable is derived from variables characterized by type of distribution function of type No. 7 (see above) with fixed variance σ (p1) and fixed particle density ρ (p2) |
+  | 9-49151 | Reserved |
+  | 49152-65534 | Reserved for Local Use |
+  | 65535 | Missing |
+
+  Notes: 
+  /// TODO: Add the notes section which contains all the distribution functions!
 
  ###  Table 4.241 - Coverage Attributes
   | Code Figure | Meaning |
   | :---------: | ------- |
+  | 0 | Undefined |
+  | 1 | Unmodified |
+  | 2 | Snow-covered |
+  | 3 | Flooded |
+  | 4 | Ice Covered |
+  | 5-191 | Reserved |
+  | 192-254 | Reserved for Local Use |
+  | 255 | Missing |
 
  ###  Table 4.242 - Tile Classification
   | Code Figure | Meaning |
   | :---------: | ------- |
+  | 0 | Reserved |
+  | 1 | Land use classes according to ESA-GLOBCOVER GCV2009 |
+  | 2 | Land use classes according to European Commission-Global Land Cover Project GLC2000 |
+  | 3-191 | Reserved |
+  | 192-254 | Reserved for Local Use |
+  | 255 | Missing |
 
  ###  Table 4.243 - Tile Class
   | Code Figure | Meaning |
   | :---------: | ------- |
+  | 0 | Reserved |
+  | 1 | Evergreen broadleaved forest |
+  | 2 | Deciduous broadleaved closed forest |
+  | 3 | Deciduous broadleaved open forest |
+  | 4 | Evergreen needle-leaf forest |
+  | 5 | Deciduous needle-leaf forest |
+  | 6 | Mixed leaf trees |
+  | 7 | Fresh water flooded trees |
+  | 8 | Saline water flooded trees |
+  | 9 | Mosaic tree/natural vegetation |
+  | 10 | Burnt tree cover | 
+  | 11 | Evergreen shrubs closed-open |
+  | 12 | Deciduous shrubs closed-open |
+  | 13 | Herbaceous vegetation closed-open |
+  | 14 | Sparse herbaceous or grass |
+  | 15 | Flooded shrubs or herbaceous |
+  | 16 | Cultivated and managed areas |
+  | 17 | Mosaic crop/tree/natural vegetation |
+  | 18 | Mosaic crop/shrub/grass |
+  | 19 | Bare areas |
+  | 20 | Water |
+  | 21 | Snow and ice |
+  | 22 | Artificial surface |
+  | 23 | Ocean |
+  | 24 | Irrigated croplands |
+  | 25 | Rain fed croplands |
+  | 26 | Mosaic cropland (50-70%)-vegetation (20-50%) |
+  | 27 | Mosaic vegetation (50-70%)-cropland (20-50%) |
+  | 28 | Closed broadleaved evergreen forest |
+  | 29 | Closed needle-leaved evergreen forest |
+  | 30 | Open needle-leaved deciduous forest |
+  | 31 | Mixed broadleaved and needle-leaved forest | 
+  | 32 | Mosaic shrubland (50-70%)-grassland (20-50%) |
+  | 33 | Mosaic grassland (50-70%)-shrubland (20-50%) | 
+  | 34 | Closed to open shrubland |
+  | 35 | Sparse vegetation |
+  | 36 | Closed to open forest regularly flooded |
+  | 37 | Closed forest or shrubland permanently flooded |
+  | 38 | Closed to open grassland regularly flooded |
+  | 39 | Undefined |
+  | 40-191 | Reserved | 
+  | 192-254 | Reserved for Local Use |
+  | 255 | Missing |
 
  ###  Table 4.244 - Quality Indicator
   | Code Figure | Meaning |
   | :---------: | ------- |
- ---
+  | 0 | Quality Information Not Given |
+  | 1 | Failed |
+  | 2 | Passed |
+  | 3-191 | Reserved |
+  | 192-254 | Reserved for Local Use |
+  | 255 | Missing |
+
+  Notes:
+  * VALIDATION means the corresponding entry is not yet official and could 
+  change at any time, so it should not be used for any official products. 
 
 
 [5] Data Representation Section 
@@ -1256,6 +1530,24 @@ codes for the sake of time.
  ###  Table 5.0 - Data Representation Template Number 
   | Code Figure | Meaning |
   | :---------: | ------- |
+  | 0 | Grid Point Data - Simple Packing (see Template 5.0) |
+  | 1 | Matrix Value at Grid Point - Simple Packing (see Template 5.1) |
+  | 2 | Grid Point Data - Complex Packing (see Template 5.2) |
+  | 3 | Grid Point Data - Complex Packing and Spatial Differencing (see Template 5.3) |
+  | 4 | Grid Point Data - IEEE Floating Point Data (see Template 5.4) |
+  | 5-39 | Reserved |
+  | 40 | Grid Point Data - JPEG2000 Compression (see Template 5.40) |
+  | 41 | Grid Point Data - PNG Compression (see Template 5.41) |
+  | 42-49 | Reserved |
+  | 50 | Spectral Data - Simple Packing (see Template 5.50) |
+  | 51 | Spectral Data - Complex Packing (see Template 5.51) |
+  | 52-60 | Reserved |
+  | 61 | Grid Point Data - Simple Packing With Logarithm Pre-processing (see Template 5.61) |
+  | 62-199 | Reserved |
+  | 200 | Run Length Packing With Level Values (see Template 5.200) |
+  | 201-49151 | Reserved |
+  | 49152-65534 | Reserved for Local Use |
+  | 65536 | Missing |
  ---
 
  ### Table 5.1 - Type of Original Field Values
