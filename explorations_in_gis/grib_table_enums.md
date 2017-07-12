@@ -641,35 +641,20 @@ ___
   | 252 | Deep convective cloud top level | |
   | 253 | Lowest bottom level of supercooled liquid water layer | |
   | 254 | Highest top level of supercooled liquied water layer | |
-  | 255 | Missing |
+  | 255 | Missing | |
 
-  Notes: (1).  The Eta vertical coordinate system involves normalizing the
-  pressure at some point on a specific level by the mean sea level pressure at
-  that point.
+  Notes: 
+  1. The Eta vertical coordinate system involves normalizing the pressure at some point on a specific level by the mean sea level pressure at that point.
 
-  (2).  Hybrid height level (Code figure 118) can be defined as:
-  z(k)=A(k)+B(k)* orog (k=1,..., NLevels; orog=orography; z(k)=height in
-  meters at level(k)
+  2. Hybrid height level (Code figure 118) can be defined as: z(k)=A(k)+B(k)* orog (k=1,..., NLevels; orog=orography; z(k)=height in meters at level(k)
 
-  (3).  Hybrid pressure level, for which code figure 119 shall be used insteaf
-  of 105, can be defined as: p(k)=A(k) + B(k) * sp (k=1,...,NLevels,
-  sp=surface pressure; p(k)=pressure at level (k)
+  3. Hybrid pressure level, for which code figure 119 shall be used insteaf of 105, can be defined as: p(k)=A(k) + B(k) * sp (k=1,...,NLevels, sp=surface pressure; p(k)=pressure at level (k)
 
-  (4). Sigma height level is the vertical model level of the height-based
-  terrain-following coordinate (Gal-Chen and Somerville, 1975). The value of
-  the level = (height of the level – height of the terrain) / (height of the
-  top level – height of the terrain), which is ≥ 0 and ≤ 1.
+  4. Sigma height level is the vertical model level of the height-based terrain-following coordinate (Gal-Chen and Somerville, 1975). The value of the level = (height of the level – height of the terrain) / (height of the top level – height of the terrain), which is ≥ 0 and ≤ 1.
 
-  (5).  The definition of a generalized vertical height coordinate implies the
-  absence of coordinate values in section 4 but the presence of an external
-  3D-GRIB message that specifies the height of every model grid point in
-  meters (see Notes for section 4), i.e., this GRIB message will contain the
-  field with discipline = 0, category = 3, parameterm = 6 (Geometric height).
+  5. The definition of a generalized vertical height coordinate implies the absence of coordinate values in section 4 but the presence of an external 3D-GRIB message that specifies the height of every model grid point in meters (see Notes for section 4), i.e., this GRIB message will contain the field with discipline = 0, category = 3, parameterm = 6 (Geometric height).
 
-  (6).  The soil level represents a model level for which the depth is not
-  constant across the model domain. The depth in metres of the level is
-  provided by another GRIB message with the parameter "Soil Depth" with
-  discipline 2, category 3 and parameter number 27.
+  6. The soil level represents a model level for which the depth is not constant across the model domain. The depth in metres of the level is provided by another GRIB message with the parameter "Soil Depth" with discipline 2, category 3 and parameter number 27. 
 ---
 
 ### Table 4.6 - Type of Ensemble Forecast
