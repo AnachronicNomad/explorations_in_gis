@@ -17,16 +17,16 @@ ___
 ## TABLE 0.0 - Discipline of Processed Data
  | Code Figure | Meaning |
  | :---------: | ------- |
-| 0       | Meterological Products |
-| 1       | Hydrological Products |
-| 2       | Land Surface Products |
-| 3-4     | Space Products |
-| 5-9     | Reserved |
-| 10      | Oceanographic Products |
-| 11-191  | Reserved |
-| 192-254 | Reserved for Local Use |
-| 255     | Missing |
----
+ | 0       | Meterological Products |
+ | 1       | Hydrological Products |
+ | 2       | Land Surface Products |
+ | 3-4     | Space Products |
+ | 5-9     | Reserved |
+ | 10      | Oceanographic Products |
+ | 11-191  | Reserved |
+ | 192-254 | Reserved for Local Use |
+ | 255     | Missing |
+ ---
 
 ___
 # 1. Identification Section
@@ -35,101 +35,103 @@ ___
 ## Table 1.0 - GRIB Master Tables Version Number
  | Code Figure | Meaning |
  | :---------: | ------- |
-| 0 | Meterological Products |
-| 1 | Hydrological Products | 
-| 2 | Land Surface Products | 
-| 3 | Space Products | 
-| 4 | Space Products |
-| 5-9 | Reserved | 
-| 10 | Oceanographic Products |
-| 11-191 | Reserved | 
-| 192-254 | Reserved for Local Use | 
-| 255 | Missing |
+ | 0 | Meterological Products |
+ | 1 | Hydrological Products | 
+ | 2 | Land Surface Products | 
+ | 3 | Space Products | 
+ | 4 | Space Products |
+ | 5-9 | Reserved | 
+ | 10 | Oceanographic Products |
+ | 11-191 | Reserved | 
+ | 192-254 | Reserved for Local Use | 
+ | 255 | Missing |
 ---
 
 ## Table 1.1 - GRIB Local Tables Version Number
  | Code Figure | Meaning |
  | :---------: | ------- |
-| 0 | Local tables not used.  Only table entries and templates from the current master table are valid. |
-| 1-254 | Number of local table version used. |
-| 255 | Missing |
+ | 0 | Local tables not used.  Only table entries and templates from the current master table are valid. |
+ | 1-254 | Number of local table version used. |
+ | 255 | Missing |
 ---
 
 ## TABLE 1.2 - Significance of Reference Time
  | Code Figure | Meaning |
  | :---------: | ------- |
-| 0 | Analysis |
-| 1 | Start of Forecast |
-| 2 | Verifying Time of Forecast |
-| 3 | Observation Time |
-| 4-191 | Reserved |
-| 192-254 | Reserved for Local Use |
-| 255 | Missing |
+ | 0 | Analysis |
+ | 1 | Start of Forecast |
+ | 2 | Verifying Time of Forecast |
+ | 3 | Observation Time |
+ | 4-191 | Reserved |
+ | 192-254 | Reserved for Local Use |
+ | 255 | Missing |
 ---
 
 ## Table 1.3 - Production Status of Data
  | Code Figure | Meaning |
  | :---------: | ------- |
-| 0 | Operational Products |
-| 1 | Operational Test Products |
-| 2 | Research Products |
-| 3 | Re-Analysis Products |
-| 4 | THORPEX Interactive Grand Global Ensemble (TIGGE) |
-| 5 | THORPEX Interactive Grand Global Ensemble (TIGGE) test |
-| 6 | S2S Operational Products |
-| 7 | S2S Test Products |
-| 8 | Uncertainties in ensembles of regional reanalysis project (UERRA) |
-| 9 | Uncertainties in ensembles of regional reanalysis project (UERRA) Test |
-| 10-191 | Reserved | 
-| 192-254 | Reserved for Local Use |
-| 255 | Missing |
+ | 0 | Operational Products |
+ | 1 | Operational Test Products |
+ | 2 | Research Products |
+ | 3 | Re-Analysis Products |
+ | 4 | THORPEX Interactive Grand Global Ensemble (TIGGE) |
+ | 5 | THORPEX Interactive Grand Global Ensemble (TIGGE) test |
+ | 6 | S2S Operational Products |
+ | 7 | S2S Test Products |
+ | 8 | Uncertainties in ensembles of regional reanalysis project (UERRA) |
+ | 9 | Uncertainties in ensembles of regional reanalysis project (UERRA) Test |
+ | 10-191 | Reserved | 
+ | 192-254 | Reserved for Local Use |
+ | 255 | Missing |
 ---
 
 ## Table 1.4 - Type of Data
  | Code Figure | Meaning |
  | :---------: | ------- |
-| 0 | Analysis Products |
-| 1 | Forecast Products |
-| 2 | Analysis and Forecast Products |
-| 3 | Control Forecast Products |
-| 4 | Perturbed Forecast Products | 
-| 5 | Control and Perturbed Forecast Products |
-| 6 | Processed Satellite Observations |
-| 7 | Processed Radar Observations |
-| 8 | Event Probability |
-| 9-191 | Reserved |
-| 192-254 | Reserved for Local Use |
-| 192 | Experimental Products |
-| 255 | Missing |
+ | 0 | Analysis Products |
+ | 1 | Forecast Products |
+ | 2 | Analysis and Forecast Products |
+ | 3 | Control Forecast Products |
+ | 4 | Perturbed Forecast Products | 
+ | 5 | Control and Perturbed Forecast Products |
+ | 6 | Processed Satellite Observations |
+ | 7 | Processed Radar Observations |
+ | 8 | Event Probability |
+ | 9-191 | Reserved |
+ | 192-254 | Reserved for Local Use |
+ | 192 | Experimental Products |
+ | 255 | Missing |
 
-Notes:
-* An initialized analysis is considered a zero-hour forecast.
+ Notes:
+ * An initialized analysis is considered a zero-hour forecast.
 ---
 
 ## Table 1.5 - Identification Template Number
  | Code Figure | Meaning |
  | :---------: | ------- |
-| 0 | Calendar Definition |
-| 1 | Paleontological Offset |
-| 2 | Calendar Definition and Paleontological Offset |
-| 3-32767 | Reserved |
-| 32768-65534 | Reserved for Local Use |
-| 65535 | Missing |
+ | 0 | Calendar Definition |
+ | 1 | Paleontological Offset |
+ | 2 | Calendar Definition and Paleontological Offset |
+ | 3-32767 | Reserved |
+ | 32768-65534 | Reserved for Local Use |
+ | 65535 | Missing |
 ---
 
 ## Table 1.6 - Type of Calendar
  | Code Figure | Meaning |
  | :---------: | ------- |
-| 0 | Gregorian |
-| 1 | 360-day |
-| 2 | 365-day (see Note 1) |
-| 3 | Proleptic Gregorian (see Note 2) |
-| 4-191 | Reserved |
-| 192-254 | Reserved for Local Use |
-| 255 | Missing |
+ | 0 | Gregorian |
+ | 1 | 360-day |
+ | 2 | 365-day (see Note 1) |
+ | 3 | Proleptic Gregorian (see Note 2) |
+ | 4-191 | Reserved |
+ | 192-254 | Reserved for Local Use |
+ | 255 | Missing |
 
-1. Essentially a non-leap year
-2. Extends the Gregorian calendar indefinitely in the past
+ Notes:
+ 1. Essentially a non-leap year
+ 2. Extends the Gregorian calendar indefinitely in the past
+---
 
 ___
 # 3. Grid Definition Section
@@ -138,11 +140,11 @@ ___
 ## Table 3.0 - Source of Grid Definition
  | Code Figure | Meaning |
  | :---------: | ------- |
-| 0 | Specified in Code Table 3.1 | 
-| 1 | Presdetermined Grid Definition - Defined by Originating Center | 
-| 2-191 | Reserved | 
-| 102-254 | Reserved for Local Use | 
-| 255 | A grid definition does not apply to this product |
+ | 0 | Specified in Code Table 3.1 | 
+ | 1 | Presdetermined Grid Definition - Defined by Originating Center | 
+ | 2-191 | Reserved | 
+ | 102-254 | Reserved for Local Use | 
+ | 255 | A grid definition does not apply to this product |
 ---
 
 ## Table 3.1 - Grid Definition Template Number
