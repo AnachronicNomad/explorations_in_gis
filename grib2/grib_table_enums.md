@@ -17,6 +17,19 @@ the classic style of academic monks.
 
 [0] Indicator Section 
 ====== 
+ This section serves to identify the start of the record in a human readable
+ form, indicate the total length of the message, and indicate the Edition
+ number of GRIB used to construct or encode the message. For GRIB2, this
+ section is always 16 octets long.
+
+ | Octet Number | Content |
+ | :----------: | ------- |
+ | 1-4 | 'GRIB' (Coded according to the International Alphabet Number 5) |
+ | 5-6 | Reserved |
+ | 7 | Discipline (From Table 0.0) |
+ | 8 | Edition number - 2 for GRIB2 |
+ | 9-16 | Total length of GRIB message in octets (all sections) |
+ ___
 
  ### TABLE 0.0 - Discipline of Processed Data
   | Code Figure | Meaning |
@@ -35,6 +48,31 @@ the classic style of academic monks.
 
 [1] Identification Section 
 ====== 
+ | Octet Number | Content |
+ | :----------: | ------- |
+ | 1-4 | Length of the section in octets (21 or N) |
+ | 5 | Number of the section (1) |
+ | 6-7 | Identification of originating/generating center (See Table 0) (See note 4) |
+ | 8-9 | Identification of originating/generating subcenter (See Table C) |
+ | 10 | GRIB master tables version number (currently 2) (See Table 1.0) (See note 1) |
+ | 11 | Version number of GRIB local tables used to augment Master Tables (see Table 1.1) |
+ | 12 | Significance of reference time (See Table 1.2) |
+ | 13-14 | Year (4 digits) |
+ | 15 | Month |
+ | 16 | Day |
+ | 17 | Hour |
+ | 18 | Minute |
+ | 19 | Second |
+ | 20 | Production Status of Processed data in the GRIB message (See Table 1.3) |
+ | 21 | Type of processed data in this GRIB message (See Table 1.4) |
+ | 22-N | Reserved |
+
+ Notes:
+ 1. Local tables define those parts of the master table which are reserved for local use except for the case described below.  In any case, the use of local tables in the messages are intended for non-local or international exchange is strongly discouraged.
+ 2. If octet 10 is set to 255 then only local tables are in use.  In this case, the local table version number (octet 11) must not be zero nor missing.  Local tables may include entries from the entire range of the tables.
+ 3. If octet 11 is zero, octet 10 must contain a valid master table version number and only those parts of the tables not reserved for local use may be used.
+ 4. If octets 8-9 is zero, Not a sub-center, the originating/generating center is the center defined by octets 6-7. 
+ ___
 
  ### Table 1.0 - GRIB Master Tables Version Number
   | Code Figure | Meaning |
@@ -120,6 +158,7 @@ the classic style of academic monks.
   | 32768-65534 | Reserved for Local Use |
   | 65535 | Missing |
  ---
+ ///TODO: Add back the Id Templates 1.0-2 for all the Table 1.5 stuff.
 
  ### Table 1.6 - Type of Calendar
   | Code Figure | Meaning |
@@ -138,8 +177,45 @@ the classic style of academic monks.
  ---
 
 
+[2] Local Use Section
+======
+ | Octet Number | Content |
+ | :----------: | ------- |
+ | 1-4 | Length of the section in octets (N) |
+ | 5 | Number of the section (2) |
+ | 6-N | Local Use |
+
+ Notes:
+ 1. Center=7 (NCEP), subcenter=14(NWS Meteorological Development Laboratory
+    (MDL)) used octet 6 to indicate which local use table to use. For MDL,
+    octet 6=1 indicates use: ["MDL Template 2.1"]
+    (http://www.nco.ncep.noaa.gov/pmb/docs/grib2/grib2_mdl_temp2-1.shtml)
+ ___
+
+
 [3] Grid Definition Section 
 ====== 
+ | Octet Number | Content |
+ | :----------: | ------- |
+ | 1-4 | Length of the section in octets (nn) |
+ | 5 | Number of the section (3) |
+ | 6 | Source of grid definition (See Table 3.0) (See note 1 below) |
+ | 7-10 | Number of data points |
+ | 11 | Number of octets for optional list of numbers defining number of points (See note 2 below) |
+ | 12 | Interpetation of list of numbers defining number of points (See Table 3.11) |
+ | 13-14 | Grid definition template number (= N) (See Table 3.1) |
+ | 15-xx | Grid definition template (See Template 3.N, where N is the grid definition template number given in octets 13-14) |
+ | [xx+1]-nn | Optional list of numbers defining number of points (See notes 2, 3, and 4 below) |
+
+ Notes:
+ 1. If octet 6 is not zero, octets 15-xx (15-nn if octet 11 is zero) may not be supplied.  This should be documented with all bits set to 1 in the grid definition template number.
+ 2. An optional list of numbers defining number of points is used to document a quasi-regular grid, where the number of points may vary from one row to another.  In such a case, octet 11 is non zero and gives the number octets on which each number of points is encoded.  For all other cases, such as regular grids, octets 11 and 12 are zero and no list is appended to the grid definition template.
+ 3. If a list of numbers defining the number of points is preset, it is appended at the end of the grid definition template ( or directly after the grid definition number if the template is missing).  When the grid definition template is present, the length is given according to bit 3 of the scanning mode flag octet (length is Nj or Ny for flag value 0).  List ordering is implied by data scanning.
+ 4. Depending on the code value given in octet 12, the list of numbers either:
+   - Corresponds to the coordinate lines as given in the grid definition, or
+   - Corresponds to a full circle, or 
+   - Does not apply.
+ ___
 
  ### Table 3.0 - Source of Grid Definition
   | Code Figure | Meaning |
