@@ -1673,7 +1673,12 @@ the classic style of academic monks.
 ====== 
  | Octet Number | Content |
  | :----------: | ------- |
- | 1-4 
+ | 1-4 | Length of the section in octets (nn) |
+ | 5 | Number of the section (5) |
+ | 6-9 | Number of data points where one or more values are specified in Section 7 when a bit map is present, total number of data points when a bit map is absent. |
+ | 10-11 | Data representation template number (See Table 5.0) |
+ | 12-nn | Data representation template (See Template 5.X, where X is the number given in octets 10-11) |
+ ___
 
  ###  Table 5.0 - Data Representation Template Number 
   | Code Figure | Meaning |
@@ -1787,6 +1792,7 @@ the classic style of academic monks.
 
 [6] Bit Map Section 
 ====== 
+ 
 
  ### Table 6.0 - Bit Map Indicator
   | Code Figure | Meaning |
