@@ -8,7 +8,7 @@ For reference, I have tried to copy and compile the values from [an unofficial N
 
 ### TABLE 0.0 - Discipline of Processed Data
   | Code Figure | Meaning |
-  | ----------- | ------: |
+  | ----------- | :-----: |
   | 0       | Meterological Products |
   | 1       | Hydrological Products |
   | 2       | Land Surface Products |
@@ -24,7 +24,7 @@ ___
 ___
 ### Table 1.0 - GRIB Master Tables Version Number
   | Code Figure | Meaning |
-  | ----------- | ------: |
+  | ----------- | :-----: |
   | 0 | Meterological Products |
   | 1 | Hydrological Products | 
   | 2 | Land Surface Products | 
@@ -39,7 +39,7 @@ ___
 
 ### Table 1.1 - GRIB Local Tables Version Number
   | Code Figure | Meaning |
-  | ----------- | ------: |
+  | ----------- | :-----: |
   | 0 | Local tables not used.  Only table entries and templates from the
   current master table are valid. |
   | 1-254 | Number of local table version used. |
@@ -48,7 +48,7 @@ ___
 
 ### TABLE 1.2 - Significance of Reference Time
   | Code Figure | Meaning |
-  | ----------- | ------: |
+  | ----------- | :-----: |
   | 0 | Analysis |
   | 1 | Start of Forecast |
   | 2 | Verifying Time of Forecast |
@@ -60,7 +60,7 @@ ___
 
 ### Table 1.3 - Production Status of Data
   | Code Figure | Meaning |
-  | ----------- | ------: |
+  | ----------- | :-----: |
   | 0 | Operational Products |
   | 1 | Operational Test Products |
   | 2 | Research Products |
@@ -78,7 +78,7 @@ ___
 
 ### Table 1.4 - Type of Data
   | Code Figure | Meaning |
-  | ----------- | ------: |
+  | ----------- | :-----: |
   | 0 | Analysis Products |
   | 1 | Forecast Products |
   | 2 | Analysis and Forecast Products |
@@ -99,7 +99,7 @@ ___
 
 ### Table 1.5 - Identification Template Number
   | Code Figure | Meaning |
-  | ----------- | ------: |
+  | ----------- | :-----: |
   | 0 | Calendar Definition |
   | 1 | Paleontological Offset |
   | 2 | Calendar Definition and Paleontological Offset |
@@ -110,7 +110,7 @@ ___
 
 ### Table 1.6 - Type of Calendar
   | Code Figure | Meaning |
-  | ----------- | ------: |
+  | ----------- | :-----: |
   | 0 | Gregorian |
   | 1 | 360-day |
   | 2 | 365-day (see Note 1) |
@@ -127,7 +127,7 @@ ___
 ___
 ### Table 3.0 - Source of Grid Definition
   | Code Figure | Meaning |
-  | ----------- | ------: |
+  | ----------- | :-----: |
   | 0 | Specified in Code Table 3.1 | 
   | 1 | Presdetermined Grid Definition - Defined by Originating Center | 
   | 2-191 | Reserved | 
@@ -137,7 +137,7 @@ ___
 
 ### Table 3.1 - Grid Definition Template Number
   | Code Figure | Meaning |
-  | ----------- | ------: |
+  | ----------- | :-----: |
   | 0 | Latitude/Longitude (See Template 3.0) Also called Equidistant Cylindrical or Plate Caree |
   | 1 | Rotated Latitude/Longitude (See Template 3.1) |
   | 2 | Stretched Latitude/Longitude (See Template 3.2) |
@@ -191,7 +191,7 @@ ___
 
 ### Table 3.2 - Shape of the Reference System
   | Code Figure | Meaning |
-  | ----------- | ------: |
+  | ----------- | :-----: |
   | 0 | Earth assumed spherical with radius = 6,367,470.0 m
   | 1 | Earth assumed spherical with radius specified (in m) by data producer
   | 2 | Earth assumed oblate spheriod with size as determined by IAU in 1965 (major axis = 6,378,160.0 m, minor axis = 6,356,775.0 m, f = 1/297.0) |
@@ -209,62 +209,62 @@ ___
 
 ###  Table 3.3 - Resolution and Component Flags
   | Code Figure | Meaning |
-  | ----------- | ------: |
+  | ----------- | :-----: |
 ---
 
 ###  Table 3.4 - Scanning Mode
   | Code Figure | Meaning |
-  | ----------- | ------: |
+  | ----------- | :-----: |
 ---
 
 ###  Table 3.5 - Projection Center
   | Code Figure | Meaning |
-  | ----------- | ------: |
+  | ----------- | :-----: |
 ---
 
 ###  Table 3.6 - Spectral Data Representation Type
   | Code Figure | Meaning |
-  | ----------- | ------: |
+  | ----------- | :-----: |
 ---
 
 ###  Table 3.7 - Spectral Data Representation Mode
   | Code Figure | Meaning |
-  | ----------- | ------: |
+  | ----------- | :-----: |
 ---
 
 ###  Table 3.8 - Grid Point Position
   | Code Figure | Meaning |
-  | ----------- | ------: |
+  | ----------- | :-----: |
 ---
 
 ###  Table 3.9 - Numbering Order of Diamonds
   | Code Figure | Meaning |
-  | ----------- | ------: |
+  | ----------- | :-----: |
 ---
 
 ###  Table 3.10 - Scanning Mode for One Diamond
   | Code Figure | Meaning |
-  | ----------- | ------: |
+  | ----------- | :-----: |
 ---
 
 ###  Table 3.11 - Interpretation of List of Numbers at end of section 3
   | Code Figure | Meaning |
-  | ----------- | ------: |
+  | ----------- | :-----: |
 ---
 
 ###  Table 3.15 - Physical Meaning of Vertical Coordinate
   | Code Figure | Meaning |
-  | ----------- | ------: |
+  | ----------- | :-----: |
 ---
 
 ###  Table 3.20 - Type of Horizontal Line
   | Code Figure | Meaning |
-  | ----------- | ------: |
+  | ----------- | :-----: |
 ---
 
 ###  Table 3.21 - Vertical Dimension Coordinate Values Definition
   | Code Figure | Meaning |
-  | ----------- | ------: |
+  | ----------- | :-----: |
 ---
 
 ___
@@ -272,7 +272,7 @@ ___
 ___
 ### Table 4.0 - Product Definition Template Number
   | Code Figure | Meaning |
-  | ----------- | ------: |
+  | ----------- | :-----: |
   | 0 | Analysis or forecast at a horizontal level or in a horizontal layer at a point in time.  (see Template 4.0) |
   | 1 | Individual ensemble forecast, control and perturbed, at a horizontal level or in a horizontal layer at a point in time.  (see Template 4.1) |
   | 2 | Derived forecasts based on all ensemble members at a horizontal level or in a horizontal layer at a point in time.  (see Template 4.2) |
@@ -337,7 +337,7 @@ ___
 ### Table 4.1 - Parameter Catagory by Product Discipline
 #### Product Discipline 0 - Meterological Products
   | Category    | Description |
-  | ----------- | ----------: |
+  | ----------- | :---------: |
   | 0 | Temperature | 
   | 1 | Moisture | 
   | 2 | Momentum | 
@@ -371,7 +371,7 @@ ___
 
 #### Product Discipline 1 - Hydrological Products
   | Category    | Description |
-  | ----------- | ----------: |
+  | ----------- | :---------: |
   | 0 | Hydrology basic products |
   | 1 | Hydrology probabilities |
   | 2 | Inland water and sediment properties |
@@ -382,7 +382,7 @@ ___
 
 #### Product Discipline 2 - Land Surface Products
   | Category    | Description |
-  | ----------- | ----------: |
+  | ----------- | :---------: |
   | 0 | Vegetation/Biomass |
   | 1 | Agricultural Aquacultural Special Products |
   | 2 | Transportation-related Products |
@@ -396,7 +396,7 @@ ___
 
 #### Product Discipline 3 - Space Products
   | Category    | Description |
-  | ----------- | ----------: |
+  | ----------- | :---------: |
   | 0 | Image Format Products (See note 1) | 
   | 1 | Quantitative products (See note 2) |
   | 2 | Cloud Properties |
@@ -422,7 +422,7 @@ ___
 
 #### Product Discipline 4 - Space Weather Products (Validation)
   | Category    | Description |
-  | ----------- | ----------: |
+  | ----------- | :---------: |
   | 0 | Temperature |
   | 1 | Momentum |
   | 2 | Charged Particle Mass and Number |
@@ -442,7 +442,7 @@ ___
 
 #### Product Discipline 10 - Oceanographic Products
   | Category    | Description |
-  | ----------- | ----------: |
+  | ----------- | :---------: |
   | 0 | Waves |
   | 1 | Currents |
   | 2 | Ice |
@@ -473,7 +473,7 @@ ___
 
 ### Table 4.3 - Type of Generating Process
   | Code Figure | Meaning |
-  | ----------- | ------: |
+  | ----------- | :-----: |
   | 0 | Analysis |
   | 1 | Initialization | 
   | 2 | Forecast |
@@ -510,7 +510,7 @@ ___
 
 ### Table 4.4 - Indicator of Unit of Time Range
   | Code Figure | Meaning |
-  | ----------- | ------: |
+  | ----------- | :-----: |
   | 0 | Minute | 
   | 1 | Hour |
   | 2 | Day | 
@@ -532,7 +532,7 @@ ___
 
 ### Table 4.5 - Fixed Surface Types and Units
   | Code Figure | Meaning | Units |
-  | ----------- | ------: | :---- |
+  | ----------- | :-----: | :---- |
   | 0 | Reserved | |
   | 1 | Ground or Water Surface | | 
   | 2 | Cloud Base Level | | 
@@ -659,7 +659,7 @@ ___
 
 ### Table 4.6 - Type of Ensemble Forecast
   | Code Figure | Meaning |
-  | ----------- | ------: |
+  | ----------- | :-----: |
   | 0 | Unperturbed High-Resolution Control Forecast |
   | 1 | Unperturbed Low-Resolution Control Forecast |
   | 2 | Negatively Perturbed Forecast |
@@ -673,7 +673,7 @@ ___
 
 ### Table 4.7 - Derived Forecast
   | Code Figure | Meaning |
-  | ----------- | ------: |
+  | ----------- | :-----: |
   | 0 | Unweighted Mean of All Members |
   | 1 | Weighted Mean of All Members |
   | 2 | Standard Deviation w.r.t. Cluster Mean |
@@ -705,7 +705,7 @@ ___
 
 ### Table 4.8 - Clustering Method
   | Code Figure | Meaning |
-  | ----------- | ------: |
+  | ----------- | :-----: |
   | 0 | Anomaly Correlation |
   | 1 | Root Mean Square |
   | 2-191 | Reserved |
@@ -715,7 +715,7 @@ ___
 
 ### Table 4.9 - Probability Type
   | Code Figure | Meaning |
-  | ----------- | ------: |
+  | ----------- | :-----: |
   | 0 | Probability of event below upper limit |
   | 1 | Probability of event above upper limit | 
   | 2 | Probability of event between upper and lower limits (the range includes lower limit but not the upper limit) |
@@ -728,7 +728,7 @@ ___
 
 ### Table 4.10 - Type of Statistical Processing
   | Code Figure | Meaning |
-  | ----------- | ------: |
+  | ----------- | :-----: |
   | 0 | Average | 
   | 1 | Accumulation (see Note 1) |
   | 2 | Maximum |
@@ -780,42 +780,42 @@ ___
 
 ### Table 4.11 - Type of Time Intervals
   | Code Figure | Meaning |
-  | ----------- | ------: |
+  | ----------- | :-----: |
 ---
 
 ### Table 4.12 - Operating Mode
   | Code Figure | Meaning |
-  | ----------- | ------: |
+  | ----------- | :-----: |
 ---
 
 ###  Table 4.13 - Quality Control Indicator
   | Code Figure | Meaning |
-  | ----------- | ------: |
+  | ----------- | :-----: |
 ---
 
 ###  Table 4.14 - Clutter Filter Indicator
   | Code Figure | Meaning |
-  | ----------- | ------: |
+  | ----------- | :-----: |
 ---
 
 ###  Table 4.15 - Type of Spatial Processing used to arrive at given data value from the source data
   | Code Figure | Meaning |
-  | ----------- | ------: |
+  | ----------- | :-----: |
 ---
 
 ###  Table 4.91 - Type of Interval
   | Code Figure | Meaning |
-  | ----------- | ------: |
+  | ----------- | :-----: |
 ---
 
 ###  Table 4.201 - Precipitation Type
   | Code Figure | Meaning |
-  | ----------- | ------: |
+  | ----------- | :-----: |
 ---
 
 ###  Table 4.202 - Precipitable Water Category
   | Code Figure | Meaning |
-  | ----------- | ------: |
+  | ----------- | :-----: |
 ---
 
 ###  Table 4.203 - Cloud Type
