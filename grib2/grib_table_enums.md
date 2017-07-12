@@ -879,7 +879,6 @@ codes for the sake of time.
   | 11-191 | Reserved |
   | 192-254 | Reserved for Local Use |
   | 255 | Missing |
- ---
 
  ###  Table 4.202 - Precipitable Water Category
   | Code Figure | Meaning |
@@ -887,7 +886,6 @@ codes for the sake of time.
   | 0-191 | Reserved |
   | 192-254 | Reserved for Local Use |
   | 255 | Missing |
- ---
 
  ###  Table 4.203 - Cloud Type
   | Code Figure | Meaning |
@@ -921,162 +919,130 @@ codes for the sake of time.
   Notes:
 
   1.  Code figures 11-20 indicate all four layers were used and ground-based fog is below the lowest layer.
- ---
 
  ###  Table 4.204 - Thunderstorm Coverage
   | Code Figure | Meaning |
   | :---------: | ------- |
- ---
 
  ###  Table 4.205 - Presence of Aerosol
   | Code Figure | Meaning |
   | :---------: | ------- |
- ---
 
  ###  Table 4.206 - Volcanic Ash
   | Code Figure | Meaning |
   | :---------: | ------- |
- ---
 
  ###  Table 4.207 - Icing
   | Code Figure | Meaning |
   | :---------: | ------- |
- ---
 
  ###  Table 4.208 - Turbulence
   | Code Figure | Meaning |
   | :---------: | ------- |
- ---
 
  ###  Table 4.209 - Planetary Boundary-Layer Regime
   | Code Figure | Meaning |
   | :---------: | ------- |
- ---
 
  ###  Table 4.210 - Contrail Intensity
   | Code Figure | Meaning |
   | :---------: | ------- |
- ---
 
  ###  Table 4.211 - Contrail Engine Type
   | Code Figure | Meaning |
   | :---------: | ------- |
- ---
 
  ###  Table 4.212 - Land Use
   | Code Figure | Meaning |
   | :---------: | ------- |
- ---
 
  ###  Table 4.213 - Soil Type
   | Code Figure | Meaning |
   | :---------: | ------- |
- ---
 
  ###  Table 4.215 - Remotely Sensed Snow Coverage
   | Code Figure | Meaning |
   | :---------: | ------- |
- ---
 
  ###  Table 4.216 - Elevation of Snow Covered Terrain
   | Code Figure | Meaning |
   | :---------: | ------- |
- ---
 
  ###  Table 4.217 - Cloud Mask Type
   | Code Figure | Meaning |
   | :---------: | ------- |
- ---
 
  ###  Table 4.218 - Pixel Scene Type
   | Code Figure | Meaning |
   | :---------: | ------- |
- ---
 
  ###  Table 4.219 - Cloud Top Height Quality Indicator
   | Code Figure | Meaning |
   | :---------: | ------- |
- ---
 
  ###  Table 4.220 - Horizontal Dimension Processed
   | Code Figure | Meaning |
   | :---------: | ------- |
- ---
 
  ###  Table 4.221 - Treatment of Missing Data 
   | Code Figure | Meaning |
   | :---------: | ------- |
- ---
 
  ###  Table 4.222 - Categorical Result 
   | Code Figure | Meaning |
   | :---------: | ------- |
- ---
 
  ###  Table 4.223 - Fire Detection Indicator 
   | Code Figure | Meaning |
   | :---------: | ------- |
- ---
 
  ###  Table 4.224 - Categorical Outlook
   | Code Figure | Meaning |
   | :---------: | ------- |
- ---
 
  ###  Table 4.225 - Weather
   | Code Figure | Meaning |
   | :---------: | ------- |
- ---
 
  ###  Table 4.227 - Icing Scenario (Weather/Cloud Classification)
   | Code Figure | Meaning |
   | :---------: | ------- |
- ---
 
  ###  Table 4.230 - Atmospheric Chemical or Physical Type
   | Code Figure | Meaning |
   | :---------: | ------- |
- ---
 
  ###  Table 4.233 - Aerosol Type
   | Code Figure | Meaning |
   | :---------: | ------- |
- ---
 
  ###  Table 4.234 - Canopy Cover Fraction
   | Code Figure | Meaning |
   | :---------: | ------- |
- ---
 
  ###  Table 4.235 - Wave-Generated Wave Spectral Description
   | Code Figure | Meaning |
   | :---------: | ------- |
- ---
 
  ###  Table 4.236 - Soil Texture Cover Fraction
   | Code Figure | Meaning |
   | :---------: | ------- |
- ---
 
  ###  Table 4.240 - Type of Distribution Function
   | Code Figure | Meaning |
   | :---------: | ------- |
- ---
 
  ###  Table 4.241 - Coverage Attributes
   | Code Figure | Meaning |
   | :---------: | ------- |
- ---
 
  ###  Table 4.242 - Tile Classification
   | Code Figure | Meaning |
   | :---------: | ------- |
- ---
 
  ###  Table 4.243 - Tile Class
   | Code Figure | Meaning |
   | :---------: | ------- |
- ---
 
  ###  Table 4.244 - Quality Indicator
   | Code Figure | Meaning |
