@@ -410,31 +410,31 @@ the classic style of academic monks.
  #### Product Discipline 0 - Meterological Products
   | Category    | Description |
   | :---------: | ----------- |
-  | 0 | Temperature | 
-  | 1 | Moisture | 
-  | 2 | Momentum | 
-  | 3 | Mass | 
-  | 4 | Short-wave radiation | 
-  | 5 | Long-wave radiation | 
-  | 6 | Cloud |
-  | 7 | Themodynamic Stability indicies | 
+  | 0 | Temperature (see Table 4.2-0-0) | 
+  | 1 | Moisture (see Table 4.2-0-1) | 
+  | 2 | Momentum (see Table 4.2-0-2) | 
+  | 3 | Mass (see Table 4.2-0-3) | 
+  | 4 | Short-wave radiation (see Table 4.2-0-4) | 
+  | 5 | Long-wave radiation (see Table 4.2-0-5) | 
+  | 6 | Cloud (see Table 4.2-0-6) |
+  | 7 | Themodynamic Stability indicies (see Table 4.2-0-7) | 
   | 8 | Kinematic Stability indicies |
   | 9 | Temperature Probabilities* | 
   | 10 | Moisture Probabilities* |
   | 11 | Momentum Probabilities* |
   | 12 | Mass Probabilities* |
-  | 13 | Aerosols |
-  | 14 | Trace gases (e.g. Ozone, CO_2) |
-  | 15 | Radar |
-  | 16 | Forecast Radar Imagery |
-  | 17 | Electrodynamics |
-  | 18 | Nuclear/radiology|
-  | 19 | Physical atmospheric properties |
-  | 20 | Atmospheric Chemical Constituents |
+  | 13 | Aerosols (see Table 4.2-0-13) |
+  | 14 | Trace gases (e.g. Ozone, CO_2) (see Table 4.2-0-14) |
+  | 15 | Radar (see Table 4.2-0-15) |
+  | 16 | Forecast Radar Imagery (see Table 4.2-0-16) |
+  | 17 | Electrodynamics (see Table 4.2-0-17) |
+  | 18 | Nuclear/radiology (see Table 4.2-0-18) |
+  | 19 | Physical atmospheric properties (see Table 4.2-0-19) |
+  | 20 | Atmospheric Chemical Constituents (see Table 4.2-0-20) |
   | 21-189 | Reserved |
-  | 190 | CCITT IA5 string |
-  | 191 | Miscellaneous |
-  | 192 | Covariance |
+  | 190 | CCITT IA5 string (see Table 4.2-0-190) |
+  | 191 | Miscellaneous (see Table 4.2-0-191) |
+  | 192 | Covariance (see Table 4.2-0-192) |
   | 192-254 | Reserved for Local Use |
   | 255 | Missing |
 
@@ -444,9 +444,9 @@ the classic style of academic monks.
  #### Product Discipline 1 - Hydrological Products
   | Category    | Description |
   | :---------: | ----------- |
-  | 0 | Hydrology basic products |
-  | 1 | Hydrology probabilities |
-  | 2 | Inland water and sediment properties |
+  | 0 | Hydrology basic products (see Table 4.2-1-0) |
+  | 1 | Hydrology probabilities (see Table 4.2-1-1) |
+  | 2 | Inland water and sediment properties (see Table 4.2-1-2) |
   | 3-191 | Reserved |
   | 192-254 | Reserved for Local Use |
   | 255 | Missing |
@@ -454,12 +454,12 @@ the classic style of academic monks.
  #### Product Discipline 2 - Land Surface Products
   | Category    | Description |
   | :---------: | ----------- |
-  | 0 | Vegetation/Biomass |
-  | 1 | Agricultural Aquacultural Special Products |
-  | 2 | Transportation-related Products |
-  | 3 | Soil Products |
-  | 4 | Fire Weather Products |
-  | 5 | Land Surface Products |
+  | 0 | Vegetation/Biomass (see Table 4.2-2-0) |
+  | 1 | Agricultural Aquacultural Special Products (see Table 4.2-2-1) |
+  | 2 | Transportation-related Products (see Table 4.2-2-2) |
+  | 3 | Soil Products (see Table 4.2-2-3) |
+  | 4 | Fire Weather Products (see Table 4.2-2-4) |
+  | 5 | Land Surface Products (see Table 4.2-2-5) |
   | 6-191 | Reserved |
   | 192-254 | Reserved for Local Use |
   | 255 | Missing |
@@ -467,15 +467,15 @@ the classic style of academic monks.
  #### Product Discipline 3 - Space Products
   | Category    | Description |
   | :---------: | ----------- |
-  | 0 | Image Format Products (See note 1) | 
-  | 1 | Quantitative products (See note 2) |
-  | 2 | Cloud Properties |
-  | 3 | Flight Rules Conditions |
-  | 4 | Volcanic Ash |
-  | 5 | Sea-surface Temperature |
-  | 6 | Solar Radiation |
+  | 0 | Image Format Products (See note 1) (see Table 4.2-3-0) | 
+  | 1 | Quantitative products (See note 2) (see Table 4.2-3-1) |
+  | 2 | Cloud Properties (see Table 4.2-3-2) |
+  | 3 | Flight Rules Conditions (see Table 4.2-3-3) |
+  | 4 | Volcanic Ash (see Table 4.2-3-4) |
+  | 5 | Sea-surface Temperature (see Table 4.2-3-5) |
+  | 6 | Solar Radiation (see Table 4.2-3-6) |
   | 7-191 | Reserved
-  | 192 | Forecast Satellite Imagery (See note 2) |
+  | 192 | Forecast Satellite Imagery (See note 2) (see Table 4.2-3-192) |
   | 192-254 | Reserved for Local Use |
   | 255 | Missing |
 
@@ -492,16 +492,16 @@ the classic style of academic monks.
  #### Product Discipline 4 - Space Weather Products (Validation)
   | Category    | Description |
   | :---------: | ----------- |
-  | 0 | Temperature |
-  | 1 | Momentum |
-  | 2 | Charged Particle Mass and Number |
-  | 3 | Electric and Magnetic Fields |
-  | 4 | Energetic Particles |
-  | 5 | Waves |
-  | 6 | Solar Electromagnetic Emissions |
-  | 7 | Terrestrial Electromagnetic Emissions |
-  | 8 | Imagery |
-  | 9 | Ion-Netral Coupling |
+  | 0 | Temperature (see Table 4.2-4-0) |
+  | 1 | Momentum (see Table 4.2-4-1) |
+  | 2 | Charged Particle Mass and Number (see Table 4.2-4-2) |
+  | 3 | Electric and Magnetic Fields (see Table 4.2-4-3) |
+  | 4 | Energetic Particles (see Table 4.2-4-4) |
+  | 5 | Waves (see Table 4.2-4-5) |
+  | 6 | Solar Electromagnetic Emissions (see Table 4.2-4-6) |
+  | 7 | Terrestrial Electromagnetic Emissions (see Table 4.2-4-7) |
+  | 8 | Imagery (see Table 4.2-4-8) |
+  | 9 | Ion-Netral Coupling (see Table 4.2-4-9) |
   | 10-191 | Reserved |
   | 192-254 | Reserved for Local Use |
   | 255 | Missing |
@@ -509,13 +509,13 @@ the classic style of academic monks.
  #### Product Discipline 10 - Oceanographic Products
   | Category    | Description |
   | :---------: | ----------- |
-  | 0 | Waves |
-  | 1 | Currents |
-  | 2 | Ice |
-  | 3 | Surface Properties |
-  | 4 | Sub-surface Properties |
+  | 0 | Waves (see Table 4.2-10-0) |
+  | 1 | Currents (see Table 4.2-10-1) |
+  | 2 | Ice (see Table 4.2-10-1) |
+  | 3 | Surface Properties (see Table 4.2-10-3) |
+  | 4 | Sub-surface Properties (see Table 4.2-10-4) |
   | 5-190 | Reserved |
-  | 191 | Miscellaneous |
+  | 191 | Miscellaneous (see Table 4.2-10-191) |
   | 192-254 | Reserved for Local Use |
   | 255 | Missing |
 
