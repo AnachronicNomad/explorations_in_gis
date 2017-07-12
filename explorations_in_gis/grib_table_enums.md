@@ -532,7 +532,7 @@ ___
 
 ### Table 4.5 - Fixed Surface Types and Units
   | Code Figure | Meaning | Units |
-  | ----------- | :-----: | :---- |
+  | :---------: | ------- | :---- |
   | 0 | Reserved | |
   | 1 | Ground or Water Surface | | 
   | 2 | Cloud Base Level | | 
