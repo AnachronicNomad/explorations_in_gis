@@ -251,6 +251,12 @@ the classic style of academic monks.
  ###  Table 3.8 - Grid Point Position
   | Code Figure | Meaning |
   | :---------: | ------- |
+  | 0 | Grid points at triangle vertices |
+  | 1 | Grid points at centers of triangles |
+  | 2 | Grid points at midpoints of triangle sides |
+  | 3-191 | Reserved |
+  | 192-254 | Reserved for Local Use |
+  | 255 | Missing |
  ---
 
  ###  Table 3.9 - Numbering Order of Diamonds
@@ -266,21 +272,70 @@ the classic style of academic monks.
  ###  Table 3.11 - Interpretation of List of Numbers at end of section 3
   | Code Figure | Meaning |
   | :---------: | ------- |
+  | 0 | There is no appended list |
+  | 1 | Numbers define number of points corresponding to full coordinate circles (i.e. parallels).  Coordinate values on each circle are multiple of the circle mesh, and extreme coordinate values given in grid definition may not be reached in all rows. |
+  | 2 | Numbers define number of points corresponding to coordinate lines delimited by extreme coordinate values given in grid definition which are present in each row. |
+  | 3 | Numbers define the actual latitudes for each row in the grid. The list of numbers are integer values of the valid latitudes in microdegrees (scale by 106) or in unit equal to the ratio of the basic angle and the subdivisions number for each row, in the same order as specified in the "scanning mode flag" (bit no. 2) (see note 2) |
+  | 4-254 | Reserved |
+  | 255 | Missing |
+
+  Notes:
+  1. For entry 1, it should be noted that depending on values of extreme (first/last) coordinates, and regardless of bit-map, effective number of points per row may be less than the number of points on the current circle.
+  2. For value for the constant direction increment Di (or Dx) in the accompanying Grid Definition Template should be set to all ones (missing).
  ---
 
  ###  Table 3.15 - Physical Meaning of Vertical Coordinate
-  | Code Figure | Meaning |
-  | :---------: | ------- |
+  | Code Figure | Meaning | Unit |
+  | :---------: | ------- | ---- |
+  | 0-19 | Reserved | |
+  | 20 | Temperature | K |
+  | 21-99 | Reserved | |
+  | 100 | Pressure | Pa |
+  | 101 | Pressure deviation from mean sea level | Pa |
+  | 102 | Altitude above mean sea level | m |
+  | 103 | Height above ground (see Note 1) | m |
+  | 104 | Sigma coordinate | |
+  | 105 | Hybrid coordinate | |
+  | 106 | Depth below land surface | m |
+  | 107 | Potential temperature (theta) | K |
+  | 108 | Pressure deviation from ground to level | Pa |
+  | 109 | Pressure deviation from ground to level | Pa |
+  | 109 | Potential vorticity | K m-2 kg-1 s-1 |
+  | 110 | Geometric height | m |
+  | 111 | Eta coordinate (see Note 2) | |
+  | 112 | Geopotential height | gpm |
+  | 113 | Logarithmic hybrid coordinate | |
+  | 114-159 | Reserved | |
+  | 160 | Depth below sea level | m |
+  | 161-191 | Reserved | |
+  | 192-254 | Reserved for Local Use | |
+  | 255 | Missing | |
+
+  Notes: 
+  1. Negative values associate to this coordinate will indicate depth below ground surface.  If values are all below the surface, use of entry 10^6 is recommended with positive coordinate values instead.
+  2. The Eta vertical coordinate system involves normalizing the pressure at some point on a specific level by the mean sea level pressure at that point.
  ---
 
  ###  Table 3.20 - Type of Horizontal Line
   | Code Figure | Meaning |
   | :---------: | ------- |
+  | 0 | Rhumb |
+  | 1 | Great Circle |
+  | 2-191 | Reserved | 
+  | 192-254 | Reserved for Local Use |
+  | 255 | Missing |
  ---
 
  ###  Table 3.21 - Vertical Dimension Coordinate Values Definition
   | Code Figure | Meaning |
   | :---------: | ------- |
+  | 0 | Explicit coordinate values set |
+  | 1 | Linear coordinates </br>  f(1) = C1 </br>   f(n) = f(n-1) + C2 |
+  | 2-10 | Reserved |
+  | 11 | Geometric coordinates </br>   f(1) = C1 </br>   f(n) = C2 x f(n-1) |
+  | 12-191 | Reserved |
+  | 192-254 | Reserved for Local Use |
+  | 255 | Missing |
  ---
 
 
