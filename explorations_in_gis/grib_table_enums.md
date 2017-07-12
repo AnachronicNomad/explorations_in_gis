@@ -695,22 +695,107 @@ ___
   | 3 | Standard Deviation w.r.t. Cluster Mean, Normalized |
   | 4 | Spread of All Members |
   | 5 | Large Anomaly Index of All Members (see Note 1) | 
-  ***
+  | 6 | Unweighted Mean of the Cluster Members |
+  | 7 | Interquartile Range (Range between the 25th and 75th quartile) |
+  | 8 | Minimum Of All Ensemble Members (see Note 2) |
+  | 9 | Maximum Of All Ensemble Members (see Note 2) |
+  | 7-191 | Reserved |
+  | 192-254 | Reserved for Local Use |
+  | 192 | Unweighted Mode of All Members |
+  | 193 | Percentile value (10%) of All Members |
+  | 194 | Percentile value (50%) of All Members |
+  | 195 | Percentile value (90%) of All Members |
+  | 196 | Statistically decided weights for each ensemble member |
+  | 197 | Climate Percentile (percentile values from climate distribution) |
+  | 198 | Deviation of Ensemble Mean from Daily Climatology |
+  | 199 | Extreme Forecast Index |
+  | 255 | Missing |
+
+  Notes:
+
+  1.  Large anomaly index is defined as {(number of members whose anomaly is higher than 0.5*SD) - (number of members whose anomaly is lower than -0.5*SD)}/(number of members) at each grid point.  SD is the observed climatological standard deviation.
+
+  2.  It should be noted that the reference for "minimum of all ensemble members" and "maximum of all ensemble members" is the set of ensemble members and not a time interval and should not be confused with the maximum and minimum described by Product Definition Template 4.8.
 ---
 
 ### Table 4.8 - Clustering Method
   | Code Figure | Meaning |
   | ----------- | ------: |
+  | 0 | Anomaly Correlation |
+  | 1 | Root Mean Square |
+  | 2-191 | Reserved |
+  | 192-254 | Reserved for Local Use |
+  | 255 | Missing |
 ---
 
 ### Table 4.9 - Probability Type
   | Code Figure | Meaning |
   | ----------- | ------: |
+  | 0 | Probability of event below upper limit |
+  | 1 | Probability of event above upper limit | 
+  | 2 | Probability of event between upper and lower limits (the range includes lower limit but not the upper limit) |
+  | 3 | Probability of event above lower limit |
+  | 4 | Probability of event below upper limit |
+  | 5-191 | Reserved |
+  | 192-254 | Reserved for Local Use |
+  | 255 | Missing |
 ---
 
 ### Table 4.10 - Type of Statistical Processing
   | Code Figure | Meaning |
   | ----------- | ------: |
+  | 0 | Average | 
+  | 1 | Accumulation (see Note 1) |
+  | 2 | Maximum |
+  | 3 | Minimum |
+  | 4 | Difference (value at the end of the time range minus value at the beginning) |
+  | 5 | Root Mean Square |
+  | 6 | Standard Deviation |
+  | 7 | Covariance (temporal variance) (see Note 2) |
+  | 8 | Difference (value at the beginning of the time range minus value at the end) |
+  | 9 | Ratio (see Note 3) |
+  | 10 | Standardized Anomaly |
+  | 11 | Summation |
+  | 12 | Confidence Index (see Note 4)  Validation |
+  | 13 | Quality Indicator (see Note 5) Validation |
+  | 14-191 | Reserved |
+  | 192-254 | Reserved for Local Use |
+  | 192 | Climatological Mean Value: multiple year averages of quantities which are themselves means over some period of time (P2) less than a year. The reference time (R) indicates the date and time of the start of a period of time, given by R to R + P2, over which a mean is formed; N indicates the number of such period-means that are averaged together to form the climatological value, assuming that the N period-mean fields are separated by one year. The reference time indicates the start of the N-year climatology. N is given in octets 22-23 of the PDS.
+
+  If P1 = 0 then the data averaged in the basic interval P2 are assumed to be continuous, i.e., all available data are simply averaged together.
+
+  If P1 = 1 (the units of time - octet 18, code table 4 - are not relevant here) then the data averaged together in the basic interval P2 are valid only at the time (hour, minute) given in the reference time, for all the days included in the P2 period. The units of P2 are given by the contents of octet 18 and Table 4. |
+
+  | 193 | Average of N forecasts (or initialized analyses); each product has forecast period of P1 (P1=0 for initialized analyses); products have reference times at intervals of P2, beginning at the given reference time. |
+  | 194 | Average of N uninitialized analyses, starting at reference time, at intervals of P2. |
+  | 195 | Average of forecast accumulations. P1 = start of accumulation period. P2 = end of accumulation period. Reference time is the start time of the first forecast, other forecasts at 24-hour intervals. Number in Ave = number of forecasts used. |
+  | 196 | Average of successive forecast accumulations. P1 = start of accumulation period. P2 = end of accumulation period. Reference time is the start time of the first forecast, other forecasts at (P2 - P1) intervals. Number in Ave = number of forecasts used |
+  | 197 | Average of forecast averages. P1 = start of averaging period. P2 = end of averaging period. Reference time is the start time of the first forecast, other forecasts at 24-hour intervals. Number in Ave = number of forecast used |
+  | 198 | Average of successive forecast averages. P1 = start of averaging period. P2 = end of averaging period. Reference time is the start time of the first forecast, other forecasts at (P2 - P1) intervals. Number in Ave = number of forecasts used |
+  | 199 | Climatological Average of N analyses, each a year apart, starting from initial time R and for the period from R+P1 to R+P2. |
+  | 200 | Climatological Average of N forecasts, each a year apart, starting from initial time R and for the period from R+P1 to R+P2. |
+  | 201 | Climatological Root Mean Square difference between N forecasts and their verifying analyses, each a year apart, starting with initial time R and for the period from R+P1 to R+P2. |
+  | 202 | Climatological Standard Deviation of N forecasts from the mean of the same N forecasts, for forecasts one year apart. The first forecast starts wtih initial time R and is for the period from R+P1 to R+P2. |
+  | 203 | Climatological Standard Deviation of N analyses from the mean of the same N analyses, for analyses one year apart. The first analyses is valid for  period R+P1 to R+P2. |
+  | 204 | Average of forecast accumulations. P1 = start of accumulation period. P2 = end of accumulation period. Reference time is the start time of the first forecast, other forecasts at 6-hour intervals. Number in Ave = number of forecast used |
+  | 205 | Average of forecast averages. P1 = start of averaging period. P2 = end of averaging period. Reference time is the start time of the first forecast, other forecasts at 6-hour intervals. Number in Ave = number of forecast used | 
+  | 206 | Average of forecast accumulations. P1 = start of accumulation period. P2 = end of accumulation period. Reference time is the start time of the first forecast, other forecasts at 12-hour intervals. Number in Ave = number of forecast used |
+  | 207 | Average of forecast averages. P1 = start of averaging period. P2 = end of averaging period. Reference time is the start time of the first forecast, other forecasts at 12-hour intervals. Number in Ave = number of forecast used |
+  | 208 | Variance |
+  | 209 | Coefficient |
+  | 255 | Missing |
+
+  Notes:
+
+  1.  The original data value (Y in the note 4 of regulation 92.9.4) has units of Code table 4.2 multiplied by second, unless otherwise noted on Code table 4.2.
+
+  2.  The original data value has squared units of Code table 4.2.
+
+  3.  The original data value is non-dimensional number without units.
+
+  4.  The original data value is non-dimensional number from 0 to 1, where 0 indicates no confidence and 1 indicates maximal confidence.
+
+  5.  The original data value is defined by Code Table 4.244.
 ---
 
 ### Table 4.11 - Type of Time Intervals
