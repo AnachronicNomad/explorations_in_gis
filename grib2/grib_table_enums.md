@@ -9,10 +9,19 @@ For reference, I have tried to copy and compile the values from
 just to have them all in one place. However, there are numerous
 other acronyms and definitions I've found elsewhere; I'll try to edit this to
 include those as I find need of them. I've also skipped over some of the enum
-codes for the sake of time.
+codes for the sake of time. 
+
+As noted at the bottom of the above page, the official docs are located [here]
+(http://www.wmo.int/pages/prog/www/WMOCodes.html), provided courtesy of the 
+World Meteorological Organization.
+
+Naturally, the GRIB(2) format is a little on the dated side compared to the 
+FM 94 BUFR and FM 95 CREX formats. I thought I would take it for a spin; just 
+to better understand the historical development of these formats and what 
+treasured glistening chunks of data may lay inside!
 
 Some modifications and jokes have been left inserted in my transcription, in 
-the classic style of academic monks.
+the classic style of monk-ish academics.
 
 
 [0] Indicator Section 
@@ -1792,7 +1801,16 @@ the classic style of academic monks.
 
 [6] Bit Map Section 
 ====== 
- 
+ | Octet Number | Content |
+ | :----------: | ------- |
+ | 1-4 | Length of the section in octets (nn) |
+ | 5 | Number of the section |
+ | 6 | Bit-map indicator (See Table 6.0) (See note 1 below) |
+ | 7-nn | Bit-map |
+
+ Notes:
+ 1. If octet 6 is not zero, the length of this section is 6 and octets 7-nn are not present.
+ ___
 
  ### Table 6.0 - Bit Map Indicator
   | Code Figure | Meaning |
@@ -1806,6 +1824,12 @@ the classic style of academic monks.
 
 [7] Data Section 
 ====== 
+ | Octet Number | Content |
+ | :----------: | ------- |
+ | 1-4 | Length of the section in octets (nn) |
+ | 5 | Number of the section (7) |
+ | 6-nn | Data in a format described by data Template 7.X, where X is the data representation template number given in octets 10-11 of Section 5. |
+ ___
 
  ### Table 7.0 - Data Template Number
   | Code Figure | Meaning |
