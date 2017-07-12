@@ -417,6 +417,20 @@ the classic style of academic monks.
 
 [4] Product Definition Section 
 ====== 
+ | Octet Number | Content |
+ | :----------: | ------- |
+ | 1-4 | Length of the section in octets (nn) |
+ | 5 | Number of the section (4) |
+ | 6-7 | Number of coordinate values after template (See note 1 below) |
+ | 8-9 | Product definition template number (See Table 4.0) |
+ | 10-xx | Product definition template (See product template 4.X, where X is the number given in octets 8-9) |
+ | [xx+1]-nn | Optional list of coordinate values (See notes 2 and 3 below) |
+
+ Notes: 
+ 1. Coordinate values are intended to document the vertical discretization associated with model data on hybrid coordinate vertical levels.  A value of zero in octets 6-7 indicates that no such values are present.  Otherwise the number corresponds to the whole set of values.
+ 2. Hybrid systems employ a means of representing vertical coordinates in terms of a mathematical combination of pressure and sigma coordinates.  When used in conjunction with a surface pressure field and an appropriate mathematical expression, the vertical coordinate parameters may be used to interpret the hybrid vertical coordinate.
+ 3. Hybrid coordinate values, if present, should be encoded in IEEE 32-bit floating point format.  They are intended to be encoded as pairs.
+ ___
 
  ### Table 4.0 - Product Definition Template Number
   | Code Figure | Meaning |
@@ -1657,6 +1671,9 @@ the classic style of academic monks.
 
 [5] Data Representation Section 
 ====== 
+ | Octet Number | Content |
+ | :----------: | ------- |
+ | 1-4 
 
  ###  Table 5.0 - Data Representation Template Number 
   | Code Figure | Meaning |
