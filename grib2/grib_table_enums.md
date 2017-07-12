@@ -14,7 +14,7 @@ codes for the sake of time.
 [0] Indicator Section 
 ====== 
 
- ## TABLE 0.0 - Discipline of Processed Data
+ ### TABLE 0.0 - Discipline of Processed Data
   | Code Figure | Meaning |
   | :---------: | ------- |
   | 0       | Meterological Products |
@@ -32,7 +32,7 @@ codes for the sake of time.
 [1] Identification Section 
 ====== 
 
- ## Table 1.0 - GRIB Master Tables Version Number
+ ### Table 1.0 - GRIB Master Tables Version Number
   | Code Figure | Meaning |
   | :---------: | ------- |
   | 0 | Meterological Products |
@@ -47,7 +47,7 @@ codes for the sake of time.
   | 255 | Missing |
  ---
 
- ## Table 1.1 - GRIB Local Tables Version Number
+ ### Table 1.1 - GRIB Local Tables Version Number
   | Code Figure | Meaning |
   | :---------: | ------- |
   | 0 | Local tables not used.  Only table entries and templates from the current master table are valid. |
@@ -55,7 +55,7 @@ codes for the sake of time.
   | 255 | Missing |
  ---
 
- ## TABLE 1.2 - Significance of Reference Time
+ ### TABLE 1.2 - Significance of Reference Time
   | Code Figure | Meaning |
   | :---------: | ------- |
   | 0 | Analysis |
@@ -67,7 +67,7 @@ codes for the sake of time.
   | 255 | Missing |
  ---
 
- ## Table 1.3 - Production Status of Data
+ ### Table 1.3 - Production Status of Data
   | Code Figure | Meaning |
   | :---------: | ------- |
   | 0 | Operational Products |
@@ -85,7 +85,7 @@ codes for the sake of time.
   | 255 | Missing |
  ---
 
- ## Table 1.4 - Type of Data
+ ### Table 1.4 - Type of Data
   | Code Figure | Meaning |
   | :---------: | ------- |
   | 0 | Analysis Products |
@@ -106,7 +106,7 @@ codes for the sake of time.
   * An initialized analysis is considered a zero-hour forecast.
  ---
 
- ## Table 1.5 - Identification Template Number
+ ### Table 1.5 - Identification Template Number
   | Code Figure | Meaning |
   | :---------: | ------- |
   | 0 | Calendar Definition |
@@ -117,7 +117,7 @@ codes for the sake of time.
   | 65535 | Missing |
  ---
 
- ## Table 1.6 - Type of Calendar
+ ### Table 1.6 - Type of Calendar
   | Code Figure | Meaning |
   | :---------: | ------- |
   | 0 | Gregorian |
@@ -137,7 +137,7 @@ codes for the sake of time.
 [3] Grid Definition Section 
 ====== 
 
- ## Table 3.0 - Source of Grid Definition
+ ### Table 3.0 - Source of Grid Definition
   | Code Figure | Meaning |
   | :---------: | ------- |
   | 0 | Specified in Code Table 3.1 | 
@@ -147,7 +147,7 @@ codes for the sake of time.
   | 255 | A grid definition does not apply to this product |
  ---
 
- ## Table 3.1 - Grid Definition Template Number
+ ### Table 3.1 - Grid Definition Template Number
   | Code Figure | Meaning |
   | :---------: | ------- |
   | 0 | Latitude/Longitude (See Template 3.0) Also called Equidistant Cylindrical or Plate Caree |
@@ -201,7 +201,7 @@ codes for the sake of time.
   | 65535 | Missing |
  ---
 
- ## Table 3.2 - Shape of the Reference System
+ ### Table 3.2 - Shape of the Reference System
   | Code Figure | Meaning |
   | :---------: | ------- |
   | 0 | Earth assumed spherical with radius = 6,367,470.0 m
@@ -219,62 +219,62 @@ codes for the sake of time.
   | 255 | Missing |
  ---
 
- ##  Table 3.3 - Resolution and Component Flags
+ ###  Table 3.3 - Resolution and Component Flags
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
 
- ##  Table 3.4 - Scanning Mode
+ ###  Table 3.4 - Scanning Mode
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
 
- ##  Table 3.5 - Projection Center
+ ###  Table 3.5 - Projection Center
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
 
- ##  Table 3.6 - Spectral Data Representation Type
+ ###  Table 3.6 - Spectral Data Representation Type
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
 
- ##  Table 3.7 - Spectral Data Representation Mode
+ ###  Table 3.7 - Spectral Data Representation Mode
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
 
- ##  Table 3.8 - Grid Point Position
+ ###  Table 3.8 - Grid Point Position
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
 
- ##  Table 3.9 - Numbering Order of Diamonds
+ ###  Table 3.9 - Numbering Order of Diamonds
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
 
- ##  Table 3.10 - Scanning Mode for One Diamond
+ ###  Table 3.10 - Scanning Mode for One Diamond
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
 
- ##  Table 3.11 - Interpretation of List of Numbers at end of section 3
+ ###  Table 3.11 - Interpretation of List of Numbers at end of section 3
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
 
- ##  Table 3.15 - Physical Meaning of Vertical Coordinate
+ ###  Table 3.15 - Physical Meaning of Vertical Coordinate
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
 
- ##  Table 3.20 - Type of Horizontal Line
+ ###  Table 3.20 - Type of Horizontal Line
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
 
- ##  Table 3.21 - Vertical Dimension Coordinate Values Definition
+ ###  Table 3.21 - Vertical Dimension Coordinate Values Definition
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
@@ -283,7 +283,7 @@ codes for the sake of time.
 [4] Product Definition Section 
 ====== 
 
- ## Table 4.0 - Product Definition Template Number
+ ### Table 4.0 - Product Definition Template Number
   | Code Figure | Meaning |
   | :---------: | ------- |
   | 0 | Analysis or forecast at a horizontal level or in a horizontal layer at a point in time.  (see Template 4.0) |
@@ -347,8 +347,8 @@ codes for the sake of time.
   | 65535 | Missing |
  ---
 
- ## Table 4.1 - Parameter Catagory by Product Discipline
- ### Product Discipline 0 - Meterological Products
+ ### Table 4.1 - Parameter Catagory by Product Discipline
+ #### Product Discipline 0 - Meterological Products
   | Category    | Description |
   | :---------: | ----------- |
   | 0 | Temperature | 
@@ -382,7 +382,7 @@ codes for the sake of time.
   Notes:
   * Entries 9, 10, 11 and 12 are deprecated.
 
- ### Product Discipline 1 - Hydrological Products
+ #### Product Discipline 1 - Hydrological Products
   | Category    | Description |
   | :---------: | ----------- |
   | 0 | Hydrology basic products |
@@ -392,7 +392,7 @@ codes for the sake of time.
   | 192-254 | Reserved for Local Use |
   | 255 | Missing |
 
- ### Product Discipline 2 - Land Surface Products
+ #### Product Discipline 2 - Land Surface Products
   | Category    | Description |
   | :---------: | ----------- |
   | 0 | Vegetation/Biomass |
@@ -405,7 +405,7 @@ codes for the sake of time.
   | 192-254 | Reserved for Local Use |
   | 255 | Missing |
 
- ### Product Discipline 3 - Space Products
+ #### Product Discipline 3 - Space Products
   | Category    | Description |
   | :---------: | ----------- |
   | 0 | Image Format Products (See note 1) | 
@@ -430,7 +430,7 @@ codes for the sake of time.
     message.
   2. Data are in specified physical units.
 
- ### Product Discipline 4 - Space Weather Products (Validation)
+ #### Product Discipline 4 - Space Weather Products (Validation)
   | Category    | Description |
   | :---------: | ----------- |
   | 0 | Temperature |
@@ -447,7 +447,7 @@ codes for the sake of time.
   | 192-254 | Reserved for Local Use |
   | 255 | Missing |
 
- ### Product Discipline 10 - Oceanographic Products
+ #### Product Discipline 10 - Oceanographic Products
   | Category    | Description |
   | :---------: | ----------- |
   | 0 | Waves |
@@ -460,7 +460,7 @@ codes for the sake of time.
   | 192-254 | Reserved for Local Use |
   | 255 | Missing |
 
- ## Table 4.2 - Parameter Number by Product Discipline and Parameter Category
+ ### Table 4.2 - Parameter Number by Product Discipline and Parameter Category
   [[ This looks mostly like a duplicate of Table 4.1 ]]
 
   Notes:
@@ -478,7 +478,7 @@ codes for the sake of time.
     lakes and rivers.
  ---
 
- ## Table 4.3 - Type of Generating Process
+ ### Table 4.3 - Type of Generating Process
   | Code Figure | Meaning |
   | :---------: | ------- |
   | 0 | Analysis |
@@ -515,7 +515,7 @@ codes for the sake of time.
     taken place on an intial analysis or forecast output.
  ---
 
- ## Table 4.4 - Indicator of Unit of Time Range
+ ### Table 4.4 - Indicator of Unit of Time Range
   | Code Figure | Meaning |
   | :---------: | ------- |
   | 0 | Minute | 
@@ -537,7 +537,7 @@ codes for the sake of time.
   | 255 | Missing |
  ---
 
- ## Table 4.5 - Fixed Surface Types and Units
+ ### Table 4.5 - Fixed Surface Types and Units
   | Code Figure | Meaning | Units |
   | :---------: | ------- | :---- |
   | 0 | Reserved | |
@@ -659,7 +659,7 @@ codes for the sake of time.
   6. The soil level represents a model level for which the depth is not constant across the model domain. The depth in metres of the level is provided by another GRIB message with the parameter "Soil Depth" with discipline 2, category 3 and parameter number 27. 
  ---
 
- ## Table 4.6 - Type of Ensemble Forecast
+ ### Table 4.6 - Type of Ensemble Forecast
   | Code Figure | Meaning |
   | :---------: | ------- |
   | 0 | Unperturbed High-Resolution Control Forecast |
@@ -673,7 +673,7 @@ codes for the sake of time.
   | 255 | Missing |
  ---
 
- ## Table 4.7 - Derived Forecast
+ ### Table 4.7 - Derived Forecast
   | Code Figure | Meaning |
   | :---------: | ------- |
   | 0 | Unweighted Mean of All Members |
@@ -703,7 +703,7 @@ codes for the sake of time.
   2.  It should be noted that the reference for "minimum of all ensemble members" and "maximum of all ensemble members" is the set of ensemble members and not a time interval and should not be confused with the maximum and minimum described by Product Definition Template 4.8.
  ---
 
- ## Table 4.8 - Clustering Method
+ ### Table 4.8 - Clustering Method
   | Code Figure | Meaning |
   | :---------: | ------- |
   | 0 | Anomaly Correlation |
@@ -713,7 +713,7 @@ codes for the sake of time.
   | 255 | Missing |
  ---
 
- ## Table 4.9 - Probability Type
+ ### Table 4.9 - Probability Type
   | Code Figure | Meaning |
   | :---------: | ------- |
   | 0 | Probability of event below upper limit |
@@ -726,7 +726,7 @@ codes for the sake of time.
   | 255 | Missing |
  ---
 
- ## Table 4.10 - Type of Statistical Processing
+ ### Table 4.10 - Type of Statistical Processing
   | Code Figure | Meaning |
   | :---------: | ------- |
   | 0 | Average | 
@@ -774,7 +774,7 @@ codes for the sake of time.
   5.  The original data value is defined by Code Table 4.244.
  ---
 
- ## Table 4.11 - Type of Time Intervals
+ ### Table 4.11 - Type of Time Intervals
   | Code Figure | Meaning |
   | :---------: | ------- |
   | 0 | Reserved |
@@ -791,7 +791,7 @@ codes for the sake of time.
   1.  Code figure 5 applies to instances where a single time subinterval was used to calculate the statistically processed field. The exact starting and ending times of the subinterval are not given, but it is known that itb is contained inclusively between the beginning time and the ending time of the overall interval.
  ---
 
- ## Table 4.12 - Operating Mode
+ ### Table 4.12 - Operating Mode
   | Code Figure | Meaning |
   | :---------: | ------- |
   | 0 | Maintenance Mode |
@@ -802,7 +802,7 @@ codes for the sake of time.
   | 255 | Missing |
  ---
 
- ##  Table 4.13 - Quality Control Indicator
+ ###  Table 4.13 - Quality Control Indicator
   | Code Figure | Meaning |
   | :---------: | ------- |
   | 0 | No Quality Control Applied |
@@ -812,7 +812,7 @@ codes for the sake of time.
   | 255 | Missing |
  ---
 
- ##  Table 4.14 - Clutter Filter Indicator
+ ###  Table 4.14 - Clutter Filter Indicator
   | Code Figure | Meaning |
   | :---------: | ------- |
   | 0 | No Clutter Filter Used |
@@ -822,7 +822,7 @@ codes for the sake of time.
   | 255 | Missing |
  ---
 
- ##  Table 4.15 - Type of Spatial Processing used to arrive at given data value from the source data
+ ###  Table 4.15 - Type of Spatial Processing used to arrive at given data value from the source data
   | Code Figure | Meaning |
   | :---------: | ------- |
   | 0 | Data is calculated directly from the source grid with no interpolation (see note 1) |
@@ -842,7 +842,7 @@ codes for the sake of time.
   3. Performs a budget interpolation at the grid point nearest to the nominal grid point.
  ---
 
- ##  Table 4.91 - Type of Interval
+ ###  Table 4.91 - Type of Interval
   | Code Figure | Meaning |
   | :---------: | ------- |
   | 0 | Smaller than first limit |
@@ -862,7 +862,7 @@ codes for the sake of time.
   | 255 | Missing |
  ---
 
- ##  Table 4.201 - Precipitation Type
+ ###  Table 4.201 - Precipitation Type
   | Code Figure | Meaning |
   | :---------: | ------- |
   | 0 | Reserved |
@@ -881,7 +881,7 @@ codes for the sake of time.
   | 255 | Missing |
  ---
 
- ##  Table 4.202 - Precipitable Water Category
+ ###  Table 4.202 - Precipitable Water Category
   | Code Figure | Meaning |
   | :---------: | ------- |
   | 0-191 | Reserved |
@@ -889,7 +889,7 @@ codes for the sake of time.
   | 255 | Missing |
  ---
 
- ##  Table 4.203 - Cloud Type
+ ###  Table 4.203 - Cloud Type
   | Code Figure | Meaning |
   | :---------: | ------- |
   | 0 | Clear |
@@ -923,162 +923,162 @@ codes for the sake of time.
   1.  Code figures 11-20 indicate all four layers were used and ground-based fog is below the lowest layer.
  ---
 
- ##  Table 4.204 - Thunderstorm Coverage
+ ###  Table 4.204 - Thunderstorm Coverage
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
 
- ##  Table 4.205 - Presence of Aerosol
+ ###  Table 4.205 - Presence of Aerosol
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
 
- ##  Table 4.206 - Volcanic Ash
+ ###  Table 4.206 - Volcanic Ash
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
 
- ##  Table 4.207 - Icing
+ ###  Table 4.207 - Icing
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
 
- ##  Table 4.208 - Turbulence
+ ###  Table 4.208 - Turbulence
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
 
- ##  Table 4.209 - Planetary Boundary-Layer Regime
+ ###  Table 4.209 - Planetary Boundary-Layer Regime
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
 
- ##  Table 4.210 - Contrail Intensity
+ ###  Table 4.210 - Contrail Intensity
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
 
- ##  Table 4.211 - Contrail Engine Type
+ ###  Table 4.211 - Contrail Engine Type
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
 
- ##  Table 4.212 - Land Use
+ ###  Table 4.212 - Land Use
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
 
- ##  Table 4.213 - Soil Type
+ ###  Table 4.213 - Soil Type
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
 
- ##  Table 4.215 - Remotely Sensed Snow Coverage
+ ###  Table 4.215 - Remotely Sensed Snow Coverage
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
 
- ##  Table 4.216 - Elevation of Snow Covered Terrain
+ ###  Table 4.216 - Elevation of Snow Covered Terrain
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
 
- ##  Table 4.217 - Cloud Mask Type
+ ###  Table 4.217 - Cloud Mask Type
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
 
- ##  Table 4.218 - Pixel Scene Type
+ ###  Table 4.218 - Pixel Scene Type
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
 
- ##  Table 4.219 - Cloud Top Height Quality Indicator
+ ###  Table 4.219 - Cloud Top Height Quality Indicator
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
 
- ##  Table 4.220 - Horizontal Dimension Processed
+ ###  Table 4.220 - Horizontal Dimension Processed
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
 
- ##  Table 4.221 - Treatment of Missing Data 
+ ###  Table 4.221 - Treatment of Missing Data 
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
 
- ##  Table 4.222 - Categorical Result 
+ ###  Table 4.222 - Categorical Result 
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
 
- ##  Table 4.223 - Fire Detection Indicator 
+ ###  Table 4.223 - Fire Detection Indicator 
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
 
- ##  Table 4.224 - Categorical Outlook
+ ###  Table 4.224 - Categorical Outlook
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
 
- ##  Table 4.225 - Weather
+ ###  Table 4.225 - Weather
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
 
- ##  Table 4.227 - Icing Scenario (Weather/Cloud Classification)
+ ###  Table 4.227 - Icing Scenario (Weather/Cloud Classification)
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
 
- ##  Table 4.230 - Atmospheric Chemical or Physical Type
+ ###  Table 4.230 - Atmospheric Chemical or Physical Type
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
 
- ##  Table 4.233 - Aerosol Type
+ ###  Table 4.233 - Aerosol Type
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
 
- ##  Table 4.234 - Canopy Cover Fraction
+ ###  Table 4.234 - Canopy Cover Fraction
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
 
- ##  Table 4.235 - Wave-Generated Wave Spectral Description
+ ###  Table 4.235 - Wave-Generated Wave Spectral Description
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
 
- ##  Table 4.236 - Soil Texture Cover Fraction
+ ###  Table 4.236 - Soil Texture Cover Fraction
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
 
- ##  Table 4.240 - Type of Distribution Function
+ ###  Table 4.240 - Type of Distribution Function
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
 
- ##  Table 4.241 - Coverage Attributes
+ ###  Table 4.241 - Coverage Attributes
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
 
- ##  Table 4.242 - Tile Classification
+ ###  Table 4.242 - Tile Classification
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
 
- ##  Table 4.243 - Tile Class
+ ###  Table 4.243 - Tile Class
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
 
- ##  Table 4.244 - Quality Indicator
+ ###  Table 4.244 - Quality Indicator
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
@@ -1087,47 +1087,47 @@ codes for the sake of time.
 [5] Data Representation Section 
 ====== 
 
- ##  Table 5.0 - Data Representation Template Number 
+ ###  Table 5.0 - Data Representation Template Number 
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
 
- ## Table 5.1 - Type of Original Field Values
+ ### Table 5.1 - Type of Original Field Values
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
 
- ## Table 5.2 - Matrix Coordinate Value Function Definition 
+ ### Table 5.2 - Matrix Coordinate Value Function Definition 
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
 
- ## Table 5.3 - Matrix Coordinate Parameter
+ ### Table 5.3 - Matrix Coordinate Parameter
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
 
- ## Table 5.4 - Group Splitting Method
+ ### Table 5.4 - Group Splitting Method
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
 
- ## Table 5.5 - Missing Value Management for Complex Packing
+ ### Table 5.5 - Missing Value Management for Complex Packing
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
 
- ## Table 5.6 - Order of Spatial Differencing
+ ### Table 5.6 - Order of Spatial Differencing
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
 
- ## Table 5.7 - Precision of Floating Point Numbers 
+ ### Table 5.7 - Precision of Floating Point Numbers 
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
 
- ## Table 5.40 - Type of Compression
+ ### Table 5.40 - Type of Compression
   | Code Figure | Meaning |
   | :---------: | ------- |
  ---
@@ -1136,13 +1136,13 @@ codes for the sake of time.
 [6] Bit Map Section 
 ====== 
 
- ## Table 6.0 - Bit Map Indicator
+ ### Table 6.0 - Bit Map Indicator
  ---
 
 
 [7] Data Section 
 ====== 
 
- ## Table 7.0 - Data Template Number
+ ### Table 7.0 - Data Template Number
  ---
 
