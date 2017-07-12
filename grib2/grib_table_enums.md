@@ -1850,3 +1850,6 @@ the classic style of monk-ish academics.
   | 65535 | Missing |
  ---
 
+
+///TODO: go and work out all the jazz with Appendices A, B, and C.
+///   In fact, I should definitely browse around App.C - Definition of Commonly used NCEP Grids 
