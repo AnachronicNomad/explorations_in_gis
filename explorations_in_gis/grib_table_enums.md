@@ -371,7 +371,7 @@ ___
 
 #### Product Discipline 1 - Hydrological Products
   | Category    | Description |
-  | ----------- | :---------: |
+  | :---------: | ----------- |
   | 0 | Hydrology basic products |
   | 1 | Hydrology probabilities |
   | 2 | Inland water and sediment properties |
