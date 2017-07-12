@@ -12,7 +12,7 @@ codes for the sake of time.
 
 
 0. Indicator Section 
-=====
+====== 
 
  ## TABLE 0.0 - Discipline of Processed Data
   | Code Figure | Meaning |
@@ -30,7 +30,7 @@ codes for the sake of time.
 
 
 1. Identification Section 
-=====
+====== 
 
  ## Table 1.0 - GRIB Master Tables Version Number
   | Code Figure | Meaning |
@@ -135,7 +135,7 @@ codes for the sake of time.
 
 
 3. Grid Definition Section 
-=====
+====== 
 
  ## Table 3.0 - Source of Grid Definition
   | Code Figure | Meaning |
@@ -281,7 +281,7 @@ codes for the sake of time.
 
 
 4. Product Definition Section 
-=====
+====== 
 
  ## Table 4.0 - Product Definition Template Number
   | Code Figure | Meaning |
@@ -1085,7 +1085,7 @@ codes for the sake of time.
 
 
 5. Data Representation Section 
-=====
+====== 
 
  ##  Table 5.0 - Data Representation Template Number 
   | Code Figure | Meaning |
@@ -1134,14 +1134,14 @@ codes for the sake of time.
 
 
 6. Bit Map Section 
-=====
+====== 
 
  ## Table 6.0 - Bit Map Indicator
  ---
 
 
 7. Data Section 
-=====
+====== 
 
  ## Table 7.0 - Data Template Number
  ---
