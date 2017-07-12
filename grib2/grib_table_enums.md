@@ -11,7 +11,7 @@ include those as I find need of them. I've also skipped over some of the enum
 codes for the sake of time.
 
 
-0. Indicator Section 
+[0] Indicator Section 
 ====== 
 
  ## TABLE 0.0 - Discipline of Processed Data
@@ -29,7 +29,7 @@ codes for the sake of time.
  ---
 
 
-1. Identification Section 
+[1] Identification Section 
 ====== 
 
  ## Table 1.0 - GRIB Master Tables Version Number
@@ -134,7 +134,7 @@ codes for the sake of time.
  ---
 
 
-3. Grid Definition Section 
+[3] Grid Definition Section 
 ====== 
 
  ## Table 3.0 - Source of Grid Definition
@@ -280,7 +280,7 @@ codes for the sake of time.
  ---
 
 
-4. Product Definition Section 
+[4] Product Definition Section 
 ====== 
 
  ## Table 4.0 - Product Definition Template Number
@@ -1084,7 +1084,7 @@ codes for the sake of time.
  ---
 
 
-5. Data Representation Section 
+[5] Data Representation Section 
 ====== 
 
  ##  Table 5.0 - Data Representation Template Number 
@@ -1133,14 +1133,14 @@ codes for the sake of time.
  ---
 
 
-6. Bit Map Section 
+[6] Bit Map Section 
 ====== 
 
  ## Table 6.0 - Bit Map Indicator
  ---
 
 
-7. Data Section 
+[7] Data Section 
 ====== 
 
  ## Table 7.0 - Data Template Number
