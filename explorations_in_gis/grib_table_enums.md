@@ -14,23 +14,24 @@ codes for the sake of time.
 ## 0. Indicator Section
 
   ### TABLE 0.0 - Discipline of Processed Data
-  |-------------|---------|
-  | Code Figure | Meaning |
-  | :---------: | ------- |
-  | 0       | Meterological Products |
-  | 1       | Hydrological Products |
-  | 2       | Land Surface Products |
-  | 3-4     | Space Products |
-  | 5-9     | Reserved |
-  | 10      | Oceanographic Products |
-  | 11-191  | Reserved |
-  | 192-254 | Reserved for Local Use |
-  | 255     | Missing |
+    |-------------|---------|
+    | Code Figure | Meaning |
+    | :---------: | ------- |
+    | 0       | Meterological Products |
+    | 1       | Hydrological Products |
+    | 2       | Land Surface Products |
+    | 3-4     | Space Products |
+    | 5-9     | Reserved |
+    | 10      | Oceanographic Products |
+    | 11-191  | Reserved |
+    | 192-254 | Reserved for Local Use |
+    | 255     | Missing |
 
 ___
 ## 1. Identification Section
 
   ### Table 1.0 - GRIB Master Tables Version Number
+    |-------------|---------|
     | Code Figure | Meaning |
     | :---------: | ------- |
     | 0 | Meterological Products |
