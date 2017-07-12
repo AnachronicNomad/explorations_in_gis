@@ -122,7 +122,7 @@ ___
     2. Extends the Gregorian calendar indefinitely in the past
 
 ___
-## 2. Grid Definition Section
+## 3. Grid Definition Section
   ### Table 3.0 - Source of Grid Definition
     | Code Figure | Meaning |
     | :---------: | ------- |
@@ -266,7 +266,7 @@ ___
   ---
 
 ___
-## 3. Product Definition Section
+## 4. Product Definition Section
   ### Table 4.0 - Product Definition Template Number
     | Code Figure | Meaning |
     | :---------: | ------- |
@@ -1088,7 +1088,7 @@ ___
   ---
  
 ___
-## 4. Data Representation Section
+## 5. Data Representation Section
   ###  Table 5.0 - Data Representation Template Number 
     | Code Figure | Meaning |
     | :---------: | ------- |
@@ -1135,10 +1135,10 @@ ___
   ---
 
 ___
-## 5. Bit Map Section
+## 6. Bit Map Section
   ### Table 6.0 - Bit Map Indicator
 
 ___
-## 6. Data Section
+## 7. Data Section
   ### Table 7.0 - Data Template Number
 
