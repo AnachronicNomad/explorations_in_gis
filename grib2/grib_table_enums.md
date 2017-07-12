@@ -1641,6 +1641,12 @@ the classic style of academic monks.
 ====== 
 
  ### Table 6.0 - Bit Map Indicator
+  | Code Figure | Meaning |
+  | :---------: | ------- |
+  | 0 | A bit map applies to this product and is specified in this section. |
+  | 1-253 | A bit map pre-determined by the originating/generating center applies to this product and is not specified in this section. |
+  | 254 | A bit map previously defined in the same GRIB2 message applies to this product. |
+  | 255 | A bit map does not apply to this product. | 
  ---
 
 
@@ -1648,5 +1654,21 @@ the classic style of academic monks.
 ====== 
 
  ### Table 7.0 - Data Template Number
+  | Code Figure | Meaning |
+  | :---------: | ------- |
+  | 0 | Grid Point Data - Simple Packing (see Template 7.0) |
+  | 1 | Matrix Value at Grid Point - Simple Packing (see Template 7.1) |
+  | 2 | Grid Point Data - Complex Packing (see Template 7.2) | 
+  | 3 | Grid Point Data - Complex Packing and Spatial Differencing (see Template 7.3) |
+  | 4 | Grid Point Data - IEEE Floating Point Data (see Template 7.4) |
+  | 5-39 | Reserved |
+  | 40 | Grid Point Data - JPEG2000 Compression (see Template 7.40) |
+  | 41 | Grid Point Data - Portable Network Graphics (PNG) format (see Template 7.41) |
+  | 42-49 | Reserved |
+  | 50 | Spectral Data - Simple Packing (see Template 7.50) |
+  | 51 | Spectral Data - Complex Packing (see Template 7.51) |
+  | 52-49151 | Reserved |
+  | 49152-65534 | Reserved for Local Use |
+  | 65535 | Missing |
  ---
 
