@@ -337,7 +337,7 @@ ___
 ### Table 4.1 - Parameter Catagory by Product Discipline
 #### Product Discipline 0 - Meterological Products
   | Category    | Description |
-  | ----------- | :---------: |
+  | :---------: | ----------- |
   | 0 | Temperature | 
   | 1 | Moisture | 
   | 2 | Momentum | 
@@ -382,7 +382,7 @@ ___
 
 #### Product Discipline 2 - Land Surface Products
   | Category    | Description |
-  | ----------- | :---------: |
+  | :---------: | ----------- |
   | 0 | Vegetation/Biomass |
   | 1 | Agricultural Aquacultural Special Products |
   | 2 | Transportation-related Products |
@@ -396,7 +396,7 @@ ___
 
 #### Product Discipline 3 - Space Products
   | Category    | Description |
-  | ----------- | :---------: |
+  | :---------: | ----------- |
   | 0 | Image Format Products (See note 1) | 
   | 1 | Quantitative products (See note 2) |
   | 2 | Cloud Properties |
@@ -422,7 +422,7 @@ ___
 
 #### Product Discipline 4 - Space Weather Products (Validation)
   | Category    | Description |
-  | ----------- | :---------: |
+  | :---------: | ----------- |
   | 0 | Temperature |
   | 1 | Momentum |
   | 2 | Charged Particle Mass and Number |
@@ -442,7 +442,7 @@ ___
 
 #### Product Discipline 10 - Oceanographic Products
   | Category    | Description |
-  | ----------- | :---------: |
+  | :---------: | ----------- |
   | 0 | Waves |
   | 1 | Currents |
   | 2 | Ice |
