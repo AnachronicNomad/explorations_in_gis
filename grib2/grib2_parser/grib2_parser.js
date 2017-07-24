@@ -8,17 +8,21 @@ const printUsage = (() => {
 }); 
 
 if(process.argv.length != 3) { printUsage(); }
-try {
-  fs.open(path.join(__dirname, process.argv[2]), 'r', (err, fd) => {
+
+fs.open(path.join(__dirname, process.argv[2]), 'r', (err, fd) => {
+  try {
     if(err) { throw err; }
     else {
       fs.fstat(fd, (err, stats) => {
         console.log(util.inspect(stats));
       })
     }
-  })
-} catch(err) {
-  if(err.code === 'ENOENT') { console.error("the file does not exist"); }
-  else { console.error(err) }
-  printUsage();
-}
+  } catch(err) {
+    if(err.code === 'ENOENT') { console.error("the file does not exist"); }
+    else { console.error(err) }
+    printUsage();
+  } finally {
+    fs.close(fd, () => {process.exit()});
+  }
+})
+
