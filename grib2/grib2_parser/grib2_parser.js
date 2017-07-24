@@ -12,7 +12,9 @@ try {
   fs.open(path.join(__dirname, process.argv[2]), 'r', (err, fd) => {
     if(err) { throw err; }
     else {
-      console.log(util.inspect(fs.fstatSync(fd)));
+      fs.fstat(fd, (err, stats) => {
+        console.log(util.inspect(stats));
+      })
     }
   })
 } catch(err) {
