@@ -3,6 +3,11 @@ grib_table_enums.md
 I wanted to keep track of the different enumeration codes for table entries in
 the GRIB format.
 -----
+**EDIT** It turns out I was stupid and there's machine readable versions
+located at
+http://www.wmo.int/pages/prog/www/WMOCodes/WMO306_vI2/LatestVERSION/LatestVERSION.html,
+so whoops.
+
 For reference, I have tried to copy and compile the values from 
 [an unofficial NCEP document](http://www.nco.ncep.noaa.gov/pmb/docs/grib2/grib2_doc.shtml#disclaimer), 
 just to have them all in one place. However, there are numerous
