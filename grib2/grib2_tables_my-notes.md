@@ -1,7 +1,9 @@
 grib2_tables_my-notes.md
 =====
-For the purposes below, an octet is equivalent to an 8-bit byte unless
-otherwise specified. 
+* All 'Offsets' and 'Lengths' are octets (8-bit bytes)
+* Until further exploration, all values are Big-Endian
+* Any time somebody says "IA5"/"International Alphabet No. 5"/"ITU-T 50" or
+whatever gorram standard, they really mean fraggin ASCII.
 
 [0] Indicator Section
 ======
@@ -44,6 +46,25 @@ otherwise specified.
 | 11 | uint8 | Interpretation of opt. list of numbers (def. # of points ) |
 | 12 | uint16 | Grid Defn. Template Number |
 | 14 | ??? | Grid Defn. Template |
-| ?? | ??? | Optional list of numbers defining number of points |
+| ??? | ??? | Optional list of numbers defining number of points |
 
+[4] Product Definition Section 
+======
+| Offset  | Data Type | Content |
+| :-----: | :-------: | :-----: |
+| 0 | uint32 | Length |
+| 4 | uint8 | Section Number |
+| 5 | uint16 | Number of coordinate values after Template |
+| 7 | uint16 | Product Defn. Template Number |
+| 9 | ??? | Product Defn. Template |
+| ??? | ??? | Opt. list of coordinate values |
 
+[5] Data Representation Section 
+======
+| Offset  | Data Type | Content |
+| :-----: | :-------: | :-----: |
+| 0 | uint32 | Length |
+| 4 | uint8 | Section Number |
+| 5 | uint32 | Number of data points |
+| 9 | uint16 | Data Repr. Template Number |
+| 11 | ??? | Data Repr. Template |
