@@ -22,7 +22,8 @@ const parse_grib2 = function(msg_buffer, message) {
   // data_header = { 'offset': null, 'length': null };
 
   offset = 16;
-  buffer = msg_buffer.slice(offset, 32);
+  buffer = msg_buffer.slice(offset);
+  console.log(buffer);
   message.identification = {
     'length': buffer.readUInt32BE(0),
     'section': buffer.readUInt8(4),
@@ -32,15 +33,15 @@ const parse_grib2 = function(msg_buffer, message) {
     'local_tables_version': buffer.readUInt8(10),
     'sig_ref_time': buffer.readUInt8(11),
     'time': {
-      'year': msg_buffer.readUInt16BE(12),
-      'month': msg_buffer.readUInt8(14),
-      'day': msg_buffer.readUInt8(15),
-      'hour': msg_buffer.readUInt8(16),
-      'minute': msg_buffer.readUInt8(17),
-      'second': msg_buffer.readUInt8(18),
+      'year': buffer.readUInt16BE(12),
+      'month': buffer.readUInt8(14),
+      'day': buffer.readUInt8(15),
+      'hour': buffer.readUInt8(16),
+      'minute': buffer.readUInt8(17),
+      'second': buffer.readUInt8(18),
     },
-    'production_status': msg_buffer.readUInt8(19),
-    'processed_type': msg_buffer.readUInt8(20),
+    'production_status': buffer.readUInt8(19),
+    'processed_type': buffer.readUInt8(20),
   }
   offset += message.identification.length;
 
