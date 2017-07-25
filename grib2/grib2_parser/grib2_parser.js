@@ -7,23 +7,8 @@ const printUsage = (() => {
 }); 
 
 const parse_grib2 = function(msg_buffer, message) {
-  // if(bytesRead != message.indicator.length) {
-  //   console.warn(`bytes read: ${bytesRead}`);
-  //   throw new Error("GRIB2 message was not read correctly from file.");
-  //   return;
-  // }
-
-  // identification_header = { 'offset': 16, 'length': null };
-  // localuse_header = { 'offset': null, 'length': null };
-  // griddefn_header = { 'offset': null, 'length': null };
-  // proddefn_header = { 'offset': null, 'length': null };
-  // datarepr_header = { 'offset': null, 'length': null };
-  // bitmap_header = { 'offset': null, 'length': null };
-  // data_header = { 'offset': null, 'length': null };
-
   offset = 16;
   buffer = msg_buffer.slice(offset);
-  console.log(buffer);
   message.identification = {
     'length': buffer.readUInt32BE(0),
     'section': buffer.readUInt8(4),
@@ -44,6 +29,24 @@ const parse_grib2 = function(msg_buffer, message) {
     'processed_type': buffer.readUInt8(20),
   }
   offset += message.identification.length;
+
+  buffer = msg_buffer.slice(offset);
+  message.local_use = {
+    'length': buffer.readUInt32BE(0),
+    'section': buffer.readUInt8(4),
+    // todo: add relevant handling for the GRIB2 Local Use section
+  }
+  offset += message.local_use.length;
+
+  console.log(msg_buffer.slice(offset))
+
+  buffer = msg_buffer.slice(offset);
+  message.grid_def = {
+    'length': buffer.readUInt32BE(0),
+    'section': buffer.readUInt8(4),
+    'source': buffer.readUInt8(5),
+    'number_data_points': buffer.toString('hex', 6, 9),
+  }
 
   console.log(message);
   return;
@@ -71,7 +74,16 @@ fs.open(path.join(__dirname, process.argv[2]), 'r', (err, fd) => {
 
       msg_buffer = Buffer.alloc(message.indicator.msg_length);
       fs.read(fd, msg_buffer, 0, message.indicator.msg_length, 0, 
-              (err, bytesRead, buffer) => { parse_grib2(buffer, message); });
+              (err, bytesRead, buffer) => { 
+                if(bytesRead != message.indicator.msg_length) {
+                  // console.warn(`bytes read: ${bytesRead}`);
+                  throw new Error(
+                    `An individualGRIB2 message was not read 
+                    correctly from file.`);
+                  return;
+                }
+                parse_grib2(buffer, message); 
+              });
     }
   } 
   catch(err) { console.error(err); printUsage(); }
