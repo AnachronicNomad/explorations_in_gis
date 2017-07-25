@@ -4,8 +4,18 @@ grib2_tables_my-notes.md
 * Until further exploration, all values are Big-Endian
 * Any time somebody says "IA5"/"International Alphabet No. 5"/"ITU-T 50" or
 whatever gorram standard, they really mean fraggin ASCII.
+* The Indicator Section is always 16 bytes long. 
+* The End Section is always 4 bytes long. 
+* In effect, both of the above notes mean that a GRIB2 message will always
+begin and end, respectively, with the 4-byte encoded strings "GRIB" and "7777"
 
-[0] Indicator Section
+-- WARNING --
+```
+    I still need to add all the postfix notes, and include relevant info from
+    the relevant notes from the WMO FM92 GRIB2 document. 
+```
+
+[0] Indicator Section (16 bytes)
 ======
 | Offset  | Data Type | Content |
 | :-----: | :-------: | :-----: |
@@ -68,3 +78,26 @@ whatever gorram standard, they really mean fraggin ASCII.
 | 5 | uint32 | Number of data points |
 | 9 | uint16 | Data Repr. Template Number |
 | 11 | ??? | Data Repr. Template |
+
+[6] Bit-Map Section
+======
+| Offset  | Data Type | Content |
+| :-----: | :-------: | :-----: |
+| 0 | uint32 | Length |
+| 4 | uint8 | Section Number |
+| 5 | Bitmap Indicator |
+| 6 | ??? | Bitmap - contiguous bits with bit <-> data point correspondance | 
+
+[7] Data Section
+======
+| Offset  | Data Type | Content |
+| :-----: | :-------: | :-----: |
+| 0 | uint32 | Length |
+| 4 | uint8 | Section Number |
+| 5 | ??? | Data -format "Data Template 7.X" specified by [5] Data Repr. Template No. |
+
+[8] End Section
+======
+| Offset  | Data Type | Content |
+| :-----: | :-------: | :-----: |
+| 0 | ASCII | '7777' |
