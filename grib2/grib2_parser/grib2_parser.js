@@ -7,9 +7,6 @@ const printUsage = (() => {
 }); 
 
 const parse_grib2 = function(msg_buffer, message) {
-  buffer = msg_buffer.slice(16, 32);
-  console.log(buffer);
-
   // if(bytesRead != message.indicator.length) {
   //   console.warn(`bytes read: ${bytesRead}`);
   //   throw new Error("GRIB2 message was not read correctly from file.");
@@ -24,27 +21,30 @@ const parse_grib2 = function(msg_buffer, message) {
   // bitmap_header = { 'offset': null, 'length': null };
   // data_header = { 'offset': null, 'length': null };
 
-  // var offset = 0;
-  // message.identification = {
-  //   'length': msg_buffer.readUInt32BE(16),
-  //   'section': msg_buffer.readUInt8(20),
-  //   'centre_id': msg_buffer.readUInt16BE(21),
-  //   'subcenter_id': msg_buffer.readUInt16BE(23),
-  //   'master_tables_version': msg_buffer.readUInt8(24),
-  //   'local_tables_version': msg_buffer.readUInt8(25),
-  //   'sig_ref_time': msg_buffer.readUInt8(26),
-  //   'time': {
-  //     'year': msg_buffer.readUInt16BE(27),
-  //     'month': msg_buffer.readUInt8(29),
-  //     'day': msg_buffer.readUInt8(30),
-  //     'hour': msg_buffer.readUInt8(31),
-  //     'minute': msg_buffer.readUInt8(32),
-  //     'second': msg_buffer.readUInt8(33),
-  //   },
-  //   'production_status': msg_buffer.readUInt8(34),
-  //   'processed_type': msg_buffer.readUInt8(35),
-  // }
+  offset = 16;
+  buffer = msg_buffer.slice(offset, 32);
+  message.identification = {
+    'length': buffer.readUInt32BE(0),
+    'section': buffer.readUInt8(4),
+    'centre_id': buffer.readUInt16BE(5),
+    'subCenter_id': buffer.readUInt16BE(7),
+    'master_tables_version': buffer.readUInt8(9),
+    'local_tables_version': buffer.readUInt8(10),
+    'sig_ref_time': buffer.readUInt8(11),
+    'time': {
+      'year': msg_buffer.readUInt16BE(12),
+      'month': msg_buffer.readUInt8(14),
+      'day': msg_buffer.readUInt8(15),
+      'hour': msg_buffer.readUInt8(16),
+      'minute': msg_buffer.readUInt8(17),
+      'second': msg_buffer.readUInt8(18),
+    },
+    'production_status': msg_buffer.readUInt8(19),
+    'processed_type': msg_buffer.readUInt8(20),
+  }
+  offset += message.identification.length;
 
+  console.log(message);
   return;
 }
 
