@@ -69,10 +69,6 @@ fs.open(path.join(__dirname, process.argv[2]), 'r', (err, fd) => {
       }
 
       msg_buffer = Buffer.alloc(message.indicator.msg_length);
-      // fs.readSync(fd, msg_buffer, 0, message.indicator.msg_length, 0);
-
-      // parse_grib2(msg_buffer, message);
-
       fs.read(fd, msg_buffer, 0, message.indicator.msg_length, 0, 
               (err, bytesRead, buffer) => { parse_grib2(buffer, message); });
     }
