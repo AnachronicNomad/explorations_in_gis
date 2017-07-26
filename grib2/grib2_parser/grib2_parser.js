@@ -6,10 +6,8 @@ const printUsage = (() => {
   process.exit(1);
 }); 
 
-const parse_grib2 = function(msg_buffer, message) {
-  offset = 16;
-  buffer = msg_buffer.slice(offset);
-  message.identification = {
+const parse_identification_section = function (buffer) {
+  identification = {
     'length': buffer.readUInt32BE(0),
     'section': buffer.readUInt8(4),
     'centre_id': buffer.readUInt16BE(5),
@@ -27,26 +25,93 @@ const parse_grib2 = function(msg_buffer, message) {
     },
     'production_status': buffer.readUInt8(19),
     'processed_type': buffer.readUInt8(20),
+    // todo: add a "remainder" field with hex-string of the rest of section
   }
-  offset += message.identification.length;
+  return identification; 
+}
 
-  buffer = msg_buffer.slice(offset);
-  message.local_use = {
+const parse_localuse_section = function (buffer) {
+  local_use = {
     'length': buffer.readUInt32BE(0),
     'section': buffer.readUInt8(4),
-    // todo: add relevant handling for the GRIB2 Local Use section
   }
-  offset += message.local_use.length;
+  local_use.remainder = buffer.toString('hex', 5, local_use.length);
+  return local_use;
+}
 
-  console.log(msg_buffer.slice(offset))
-
-  buffer = msg_buffer.slice(offset);
-  message.grid_def = {
+const parse_gridDef_section = function (buffer) {
+  grid_def = {
     'length': buffer.readUInt32BE(0),
     'section': buffer.readUInt8(4),
     'source': buffer.readUInt8(5),
-    'number_data_points': buffer.toString('hex', 6, 9),
+    'number_data_points': buffer.readUInt32BE(6),
+    'opt_numList_length': buffer.readUInt8(10),
+    'interp_opt_numList': buffer.readUInt8(11),
+    'template_num': buffer.readUInt16BE(12),
+    // todo: add a "remainder" field with hex-string of the rest of section
   }
+  return grid_def;
+}
+
+const parse_prodDef_section = function (buffer) {
+  prod_def = {
+    'length': buffer.readUInt32BE(0),
+    'section': buffer.readUInt8(4),
+    'num_coord_values': buffer.readUInt16BE(5),
+    'template_num': buffer.readUInt16BE(7),
+      // todo: add a "remainder" field with hex-string of the rest of section
+  }
+  return prod_def;
+}
+
+const parse_datarepr_section = function (buffer) {
+  data_repr = { 
+    'length': buffer.readUInt32BE(0),
+    'section': buffer.readUInt8(4),
+    'num_data_points': buffer.readUInt32BE(5),
+    'template_num': buffer.readUInt16BE(9),
+  }
+  return data_repr;
+}
+
+const parse_bitmap_section = function (buffer) {
+  bit_map = {
+    'length': buffer.readUInt32BE(0),
+    'section': buffer.readUInt8(4),
+    'indicator': buffer.readUInt8(5),
+  }
+  bit_map.bitmap = buffer.toString('hex', 0, bit_map.length);
+  return bit_map;
+}
+
+const parse_data_section = function (buffer) {
+  data = {
+    'length': buffer.readUInt32BE(0),
+    'section': buffer.readUInt8(4),
+    'data': buffer.toString('hex', 5, (buffer.length - 4))
+  }
+  return data;
+}
+
+const parse_grib2 = function(msg_buffer, message) {
+  offset = 16;
+  buffer = msg_buffer.slice(offset);
+  message.identification = parse_identification_section(buffer);
+
+  buffer = buffer.slice(message.identification.length);
+  message.grid_def = parse_gridDef_section(buffer);
+
+  buffer = buffer.slice(message.grid_def.length);
+  message.prod_def = parse_prodDef_section(buffer);
+
+  buffer = buffer.slice(message.prod_def.length);
+  message.data_repr = parse_datarepr_section(buffer);
+
+  buffer = buffer.slice(message.data_repr.length);
+  message.bit_map = parse_bitmap_section(buffer);
+
+  buffer = buffer.slice(message.bit_map.length);
+  message.data = parse_data_section(buffer);
 
   console.log(message);
   return;
@@ -78,7 +143,7 @@ fs.open(path.join(__dirname, process.argv[2]), 'r', (err, fd) => {
                 if(bytesRead != message.indicator.msg_length) {
                   // console.warn(`bytes read: ${bytesRead}`);
                   throw new Error(
-                    `An individualGRIB2 message was not read 
+                    `An individual GRIB2 message was not read 
                     correctly from file.`);
                   return;
                 }
