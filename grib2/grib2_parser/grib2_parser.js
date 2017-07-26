@@ -6,7 +6,7 @@ function printUsage() {
   process.exit(1);
 } 
 
-function parse_identification_section (buffer) {
+function parse_ident_sec (buffer) {
   identification = {
     'length': buffer.readUInt32BE(0),
     'section': buffer.readUInt8(4),
@@ -30,7 +30,7 @@ function parse_identification_section (buffer) {
   return identification; 
 }
 
-function parse_localuse_section (buffer) {
+function parse_localuse_sec (buffer) {
   local_use = {
     'length': buffer.readUInt32BE(0),
     'section': buffer.readUInt8(4),
@@ -39,7 +39,7 @@ function parse_localuse_section (buffer) {
   return local_use;
 }
 
-function parse_gridDef_section (buffer) {
+function parse_gridDef_sec (buffer) {
   grid_def = {
     'length': buffer.readUInt32BE(0),
     'section': buffer.readUInt8(4),
@@ -53,7 +53,7 @@ function parse_gridDef_section (buffer) {
   return grid_def;
 }
 
-function parse_prodDef_section (buffer) {
+function parse_prodDef_sec (buffer) {
   prod_def = {
     'length': buffer.readUInt32BE(0),
     'section': buffer.readUInt8(4),
@@ -64,7 +64,7 @@ function parse_prodDef_section (buffer) {
   return prod_def;
 }
 
-function parse_datarepr_section (buffer) {
+function parse_datarepr_sec (buffer) {
   data_repr = { 
     'length': buffer.readUInt32BE(0),
     'section': buffer.readUInt8(4),
@@ -74,7 +74,7 @@ function parse_datarepr_section (buffer) {
   return data_repr;
 }
 
-function parse_bitmap_section (buffer) {
+function parse_bitmap_sec (buffer) {
   bit_map = {
     'length': buffer.readUInt32BE(0),
     'section': buffer.readUInt8(4),
@@ -84,7 +84,7 @@ function parse_bitmap_section (buffer) {
   return bit_map;
 }
 
-function parse_data_section (buffer) {
+function parse_data_sec (buffer) {
   data = {
     'length': buffer.readUInt32BE(0),
     'section': buffer.readUInt8(4),
@@ -94,28 +94,47 @@ function parse_data_section (buffer) {
 }
 
 function parse_grib2 (msg_buffer, message) {
-  offset = 16;
+  offset = 0;
+  if (message != null) { offset = 16; }
   buffer = msg_buffer.slice(offset);
 
-  message.identification = parse_identification_section(buffer);
+  while(buffer.length > 4) {
+    length = buffer.readUInt32BE(0);
+    section = buffer.readUInt8(4);
 
-  buffer = buffer.slice(message.identification.length);
-  message.grid_def = parse_gridDef_section(buffer);
+    switch(section) {
+      case 1: 
+        message.identification = parse_ident_sec(buffer.slice(0, length)); 
+        break;
+      // case 2: 
+      //   message.local_use = parse_localuse_sec(buffer.slice(0, length));
+      //   break;
+      //todo: add proper handling for Local Use sections
+      case 3: 
+        message.grid_def = parse_gridDef_sec(buffer.slice(0, length));
+        break;
+      case 4:
+        message.prod_def = parse_prodDef_sec(buffer.slice(0, length));
+        break;
+      case 5:
+        message.data_repr = parse_datarepr_sec(buffer.slice(0, length));
+        break;
+      case 6:
+        message.bit_map = parse_bitmap_sec(buffer.slice(0, length));
+        break;
+      case 7:
+        message.data = parse_data_sec(buffer.slice(0, length));
+        break;
+      default:
+        console.error("lol I can't read wtf this is.");
+        break;
+    }
 
-  buffer = buffer.slice(message.grid_def.length);
-  message.prod_def = parse_prodDef_section(buffer);
-
-  buffer = buffer.slice(message.prod_def.length);
-  message.data_repr = parse_datarepr_section(buffer);
-
-  buffer = buffer.slice(message.data_repr.length);
-  message.bit_map = parse_bitmap_section(buffer);
-
-  buffer = buffer.slice(message.bit_map.length);
-  message.data = parse_data_section(buffer);
+    buffer = buffer.slice(length);
+  }
 
   console.log(message);
-  return;
+  return message;
 }
 
 if(process.argv.length != 3) { printUsage(); }
