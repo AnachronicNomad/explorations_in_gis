@@ -1,6 +1,17 @@
 const fs = require('fs');
 const path = require('path');
 
+const SECTION_MIN_LENGTHS = {
+  'SECTION_MIN_LENGTH': 4,
+  'INDICATOR_MIN_LENGTH': 16,
+  'IDENTIFICATION_MIN_LENGTH': 21,
+  'GRID_DEF_MIN_LENGTH': 14,
+  'PROD_DEF_MIN_LENGTH': 9,
+  'DATA_REPR_MIN_LENGTH': 11,
+  'BITMAP_MIN_LENGTH': 6,
+  'DATA_MIN_LENGTH': 5,
+}
+
 function printUsage() {
   console.error("usage: node grib2_parser.js <file>");
   process.exit(1);
@@ -27,6 +38,13 @@ function parse_ident_sec (buffer) {
     'processed_type': buffer.readUInt8(20),
     // todo: add a "remainder" field with hex-string of the rest of section
   }
+
+  if(identification.length > SECTION_MIN_LENGTHS.IDENTIFICATION_MIN_LENGTH ) {
+    identification.remainder = 
+      buffer.toString('hex', 
+                      SECTION_MIN_LENGTHS.IDENTIFICATION_MIN_LENGTH, 
+                      buffer.length);
+  }
   return identification; 
 }
 
@@ -48,7 +66,13 @@ function parse_gridDef_sec (buffer) {
     'opt_numList_length': buffer.readUInt8(10),
     'interp_opt_numList': buffer.readUInt8(11),
     'template_num': buffer.readUInt16BE(12),
-    // todo: add a "remainder" field with hex-string of the rest of section
+  }
+
+  if(grid_def.length > SECTION_MIN_LENGTHS.GRID_DEF_MIN_LENGTH) {
+    grid_def.remainder = 
+      buffer.toString('hex',
+                      SECTION_MIN_LENGTHS.GRID_DEF_MIN_LENGTH, 
+                      buffer.length);
   }
   return grid_def;
 }
@@ -59,7 +83,13 @@ function parse_prodDef_sec (buffer) {
     'section': buffer.readUInt8(4),
     'num_coord_values': buffer.readUInt16BE(5),
     'template_num': buffer.readUInt16BE(7),
-      // todo: add a "remainder" field with hex-string of the rest of section
+  }
+
+  if(prod_def.length > SECTION_MIN_LENGTHS.PROD_DEF_MIN_LENGTH) {
+    prod_def.remainder = 
+      buffer.toString('hex',
+                      SECTION_MIN_LENGTHS.PROD_DEF_MIN_LENGTH,
+                      buffer.length);
   }
   return prod_def;
 }
@@ -71,6 +101,13 @@ function parse_datarepr_sec (buffer) {
     'num_data_points': buffer.readUInt32BE(5),
     'template_num': buffer.readUInt16BE(9),
   }
+
+  if(data_repr.length > SECTION_MIN_LENGTHS.GRID_DEF_MIN_LENGTH) {
+    data_repr.remainder = 
+      buffer.toString('hex',
+                      SECTION_MIN_LENGTHS.DATA_REPR_MIN_LENGTH, 
+                      buffer.length);
+  }
   return data_repr;
 }
 
@@ -79,8 +116,10 @@ function parse_bitmap_sec (buffer) {
     'length': buffer.readUInt32BE(0),
     'section': buffer.readUInt8(4),
     'indicator': buffer.readUInt8(5),
+    'bitmap' : buffer.toString('hex', 
+                               SECTION_MIN_LENGTHS.BITMAP_MIN_LENGTH, 
+                               buffer.length)
   }
-  bit_map.bitmap = buffer.toString('hex', 6, bit_map.length);
   return bit_map;
 }
 
@@ -95,10 +134,10 @@ function parse_data_sec (buffer) {
 
 function parse_grib2 (msg_buffer, message) {
   offset = 0;
-  if (message != null) { offset = 16; }
+  if (message != null) { offset = SECTION_MIN_LENGTHS.INDICATOR_MIN_LENGTH; }
   buffer = msg_buffer.slice(offset);
 
-  while(buffer.length > 4) {
+  while(buffer.length > SECTION_MIN_LENGTHS.SECTION_MIN_LENGTH) {
     length = buffer.readUInt32BE(0);
     section = buffer.readUInt8(4);
 
