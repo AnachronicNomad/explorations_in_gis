@@ -1,12 +1,12 @@
 const fs = require('fs');
 const path = require('path');
 
-const printUsage = (() => {
+function printUsage() {
   console.error("usage: node grib2_parser.js <file>");
   process.exit(1);
-}); 
+} 
 
-const parse_identification_section = function (buffer) {
+function parse_identification_section (buffer) {
   identification = {
     'length': buffer.readUInt32BE(0),
     'section': buffer.readUInt8(4),
@@ -30,7 +30,7 @@ const parse_identification_section = function (buffer) {
   return identification; 
 }
 
-const parse_localuse_section = function (buffer) {
+function parse_localuse_section (buffer) {
   local_use = {
     'length': buffer.readUInt32BE(0),
     'section': buffer.readUInt8(4),
@@ -39,7 +39,7 @@ const parse_localuse_section = function (buffer) {
   return local_use;
 }
 
-const parse_gridDef_section = function (buffer) {
+function parse_gridDef_section (buffer) {
   grid_def = {
     'length': buffer.readUInt32BE(0),
     'section': buffer.readUInt8(4),
@@ -53,7 +53,7 @@ const parse_gridDef_section = function (buffer) {
   return grid_def;
 }
 
-const parse_prodDef_section = function (buffer) {
+function parse_prodDef_section (buffer) {
   prod_def = {
     'length': buffer.readUInt32BE(0),
     'section': buffer.readUInt8(4),
@@ -64,7 +64,7 @@ const parse_prodDef_section = function (buffer) {
   return prod_def;
 }
 
-const parse_datarepr_section = function (buffer) {
+function parse_datarepr_section (buffer) {
   data_repr = { 
     'length': buffer.readUInt32BE(0),
     'section': buffer.readUInt8(4),
@@ -74,7 +74,7 @@ const parse_datarepr_section = function (buffer) {
   return data_repr;
 }
 
-const parse_bitmap_section = function (buffer) {
+function parse_bitmap_section (buffer) {
   bit_map = {
     'length': buffer.readUInt32BE(0),
     'section': buffer.readUInt8(4),
@@ -84,7 +84,7 @@ const parse_bitmap_section = function (buffer) {
   return bit_map;
 }
 
-const parse_data_section = function (buffer) {
+function parse_data_section (buffer) {
   data = {
     'length': buffer.readUInt32BE(0),
     'section': buffer.readUInt8(4),
@@ -93,9 +93,10 @@ const parse_data_section = function (buffer) {
   return data;
 }
 
-const parse_grib2 = function(msg_buffer, message) {
+function parse_grib2 (msg_buffer, message) {
   offset = 16;
   buffer = msg_buffer.slice(offset);
+
   message.identification = parse_identification_section(buffer);
 
   buffer = buffer.slice(message.identification.length);
