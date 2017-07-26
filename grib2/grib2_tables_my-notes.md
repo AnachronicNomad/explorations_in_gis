@@ -8,6 +8,8 @@ whatever gorram standard, they really mean fraggin ASCII.
 * The End Section is always 4 bytes long. 
 * In effect, both of the above notes mean that a GRIB2 message will always
 begin and end, respectively, with the 4-byte encoded strings "GRIB" and "7777"
+* Every single header Section begins with a 4-byte uint32 (the section length),
+followed by a 1-byte uint8 (the section number).
 
 -- WARNING --
 ```
@@ -85,7 +87,7 @@ begin and end, respectively, with the 4-byte encoded strings "GRIB" and "7777"
 | :-----: | :-------: | :------ |
 | 0 | uint32 | Length |
 | 4 | uint8 | Section Number |
-| 5 | ??? | Bitmap Indicator |
+| 5 | uint8 | Bitmap Indicator |
 | 6 | ??? | Bitmap - contiguous bits with bit <-> data point correspondance | 
 
 [7] Data Section
