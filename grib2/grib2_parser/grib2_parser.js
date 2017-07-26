@@ -80,7 +80,7 @@ function parse_bitmap_section (buffer) {
     'section': buffer.readUInt8(4),
     'indicator': buffer.readUInt8(5),
   }
-  bit_map.bitmap = buffer.toString('hex', 0, bit_map.length);
+  bit_map.bitmap = buffer.toString('hex', 6, bit_map.length);
   return bit_map;
 }
 
