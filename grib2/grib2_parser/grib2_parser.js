@@ -127,7 +127,7 @@ function parse_data_sec (buffer) {
   data = {
     'length': buffer.readUInt32BE(0),
     'section': buffer.readUInt8(4),
-    'data': buffer.toString('hex', 5, (buffer.length - 4))
+    'data': buffer.slice(5).toString('base64'),
   }
   return data;
 }
@@ -172,7 +172,8 @@ function parse_grib2 (msg_buffer, message) {
     buffer = buffer.slice(length);
   }
 
-  console.log(message);
+  // console.log(message);
+  console.log(JSON.stringify(message, null, ' '));
   return message;
 }
 
