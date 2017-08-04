@@ -121,29 +121,27 @@ function expand_data (buffer, message) {
 }
 
 function expand_grib2_to_json (buffer, message) {
-  if (buffer.length <= SECTION_MIN_LENGTHS.SECTION_MIN_LENGTH) {
-    return JSON.stringify(message, null, ' ');
+  if (buffer.length > SECTION_MIN_LENGTHS.SECTION_MIN_LENGTH) {
+    if( (buffer.toString('ascii', 0, 4)) == 'GRIB' )
+      { return expand_indicator(buffer, message); }
+
+    length = buffer.readUInt32BE(0);
+    section_num = buffer.readUInt8(4);
+
+    switch(section_num) {
+        case 1: return expand_identification(buffer, message);
+        case 3: return expand_grid_def(buffer, message);
+        case 4: return expand_prod_def(buffer, message);
+        case 5: return expand_datarepr(buffer, message);
+        case 6: return expand_bitmap(buffer, message);
+        case 7: return expand_data(buffer, message);
+        default:
+          console.error("lol I can't read wtf this is.");
+          break;
+      }
   }
 
-  if( (buffer.toString('ascii', 0, 4)) == 'GRIB' )
-    { return expand_indicator(buffer, message); }
-
-  length = buffer.readUInt32BE(0);
-  section_num = buffer.readUInt8(4);
-
-  switch(section_num) {
-      case 1: return expand_identification(buffer, message);
-      case 3: return expand_grid_def(buffer, message);
-      case 4: return expand_prod_def(buffer, message);
-      case 5: return expand_datarepr(buffer, message);
-      case 6: return expand_bitmap(buffer, message);
-      case 7: return expand_data(buffer, message);
-      default:
-        console.error("lol I can't read wtf this is.");
-        break;
-    }
-
-  // return JSON.stringify(message, null, ' ');;
+  return JSON.stringify(message, null, ' ');
 }
 
 module.exports.expand_grib2_to_json = expand_grib2_to_json
