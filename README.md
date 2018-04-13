@@ -1,4 +1,4 @@
-# explorations_in_gis
+# js_grib2_parser
 
 **Please refer to individual MarkDown files at each folder level for notes**
 
